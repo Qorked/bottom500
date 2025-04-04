@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="RaceAroundTheWorld"
+run/main_scene="uid://xjqq0luv2wtd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://c885qttnfh0c0"
 
 [autoload]
 
-Globalmanager="*res://singltons/Globalmanager.gd"
+Gamemanager="*res://singltons/Gamemanager.gd"
 
 [display]
 

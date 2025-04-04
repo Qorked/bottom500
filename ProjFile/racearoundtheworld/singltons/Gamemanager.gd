@@ -3,7 +3,7 @@ extends Node
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
 const MINI_GAME_COUNT := 10
-const SPEED_INCREMENT := 0.1
+const SPEED_INCREMENT := 0.05
 
 var mini_game_scenes := []
 var played_games := {}
@@ -18,7 +18,7 @@ var main_menu_scene := preload("res://ui/mainmenu.tscn")
 
 func _ready():
 	for i in range(1, MINI_GAME_COUNT + 1):
-#		mini_game_scenes.append(preload("res://MiniGames/MiniGame%d.tscn" % i))
+		mini_game_scenes.append(preload("res://MiniGames/MiniGame%d.tscn" % i))
 	reset_game()
 
 func reset_game():
