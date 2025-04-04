@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://6usnau6klcrx"]
+
+[ext_resource type="Script" uid="uid://c4t0nvt3jda0b" path="res://ui/lossscreen.gd" id="1_csx1s"]
+
+[node name="Lossscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_csx1s")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 34.0
+text = "RESTART
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
