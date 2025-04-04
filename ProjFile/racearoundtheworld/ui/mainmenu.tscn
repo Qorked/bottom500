@@ -15,7 +15,8 @@ script = ExtResource("1_016uc")
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-text = "Press to win
+text = "Press to start
+
 "
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
