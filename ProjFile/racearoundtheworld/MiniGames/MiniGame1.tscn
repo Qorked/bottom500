@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://djvtnqcjdbfv0"]
+
+[ext_resource type="Script" uid="uid://dgin2scraoxfg" path="res://MiniGames/MiniGame1.gd" id="1_hogxk"]
+[ext_resource type="Texture2D" uid="uid://c885qttnfh0c0" path="res://icon.svg" id="2_8g6en"]
+[ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/player_2d_back_forth.tscn" id="3_526fi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6r6fj"]
+distance = -650.0
+
+[node name="MiniGame1" type="Node2D"]
+script = ExtResource("1_hogxk")
+
+[node name="HolePlaceHolder" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(173, 653)
+scale = Vector2(11.04, 0.0666763)
+texture = ExtResource("2_8g6en")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_6r6fj")
+
+[node name="Player2dBackForth" parent="." instance=ExtResource("3_526fi")]
+position = Vector2(4, 623)
+
+[node name="Camera2D" type="Camera2D" parent="Player2dBackForth"]
+position = Vector2(-4, -36)
+zoom = Vector2(4, 4)

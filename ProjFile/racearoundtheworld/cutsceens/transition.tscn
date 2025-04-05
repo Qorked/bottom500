@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://bnvi7mhse6ilp"]
+[gd_scene load_steps=2 format=3 uid="uid://bnvi7mhse6ilp"]
+
+[ext_resource type="Script" uid="uid://bfd70p7snh3ty" path="res://cutsceens/transition.gd" id="1_0ayf2"]
 
 [node name="Transition" type="Node2D"]
+script = ExtResource("1_0ayf2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 344.0
+offset_top = 232.0
+offset_right = 798.0
+offset_bottom = 369.0
+theme_override_font_sizes/font_size = 100
+text = "LOADING"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

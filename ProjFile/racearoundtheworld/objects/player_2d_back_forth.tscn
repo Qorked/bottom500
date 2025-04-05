@@ -1,17 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpswndvp7rnal"]
 
-[ext_resource type="Script" uid="uid://c55wyf8bl2a5a" path="res://player_2d_back_forth.gd" id="1_dmnld"]
+[ext_resource type="Script" uid="uid://c55wyf8bl2a5a" path="res://objects/player_2d_back_forth.gd" id="1_dmnld"]
 [ext_resource type="Texture2D" uid="uid://qxvagihxoils" path="res://art/Car Driving.png" id="2_8pwvy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqm6j"]
+size = Vector2(62, 25.25)
 
-[node name="Player2dBackForth" type="CharacterBody2D"]
+[node name="Player2dBackForth" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_dmnld")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_8pwvy")
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.75, 11)
 shape = SubResource("RectangleShape2D_hqm6j")
