@@ -1,9 +1,9 @@
 extends Node
 
 func _ready():
-	# Replace with your game logic
-	await get_tree().create_timer(2.0).timeout  # Simulate 2 sec gameplay
-	var win = true  # or false, from your actual gameplay
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	await get_tree().create_timer(15.0).timeout  # Simulate 2 sec gameplay
+	var win = false  # or false, from your actual gameplay
 	if win:
 		Gamemanager.mini_game_won()
 	else:
