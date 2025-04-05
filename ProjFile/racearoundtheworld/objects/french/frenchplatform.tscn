@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://datnp3ebf711s"]
+
+[ext_resource type="Texture2D" uid="uid://clbo5d1xxpy1j" path="res://art/objects/Baguette.png" id="1_fqv8o"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fqv8o"]
+a = Vector2(-96, 15)
+b = Vector2(178, 14)
+
+[node name="frenchplatform" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fqv8o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-41, 30)
+shape = SubResource("SegmentShape2D_fqv8o")
+one_way_collision = true

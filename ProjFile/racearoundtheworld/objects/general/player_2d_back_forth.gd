@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var allow_jump: bool = true
 @export var can_double_jump: bool = false
 @export var jump_action_name: String = "space"
+@export var auto_jump: bool = false
 
 # === Sprite & Visuals ===
 @export var flip_sprite_on_direction: bool = true
@@ -50,14 +51,20 @@ func _physics_process(delta: float) -> void:
 		has_double_jumped = false
 
 	# === Jumping ===
-	if allow_jump and Input.is_action_just_pressed(jump_action_name):
-		if is_on_floor():
+# === Jumping ===
+	if is_on_floor():
+		if auto_jump:
+			velocity.y = jump_velocity
+			has_double_jumped = false
+#			_play_animation("jump")
+		elif allow_jump and Input.is_action_just_pressed(jump_action_name):
 			velocity.y = jump_velocity
 #			_play_animation("jump")
-		elif can_double_jump and not has_double_jumped:
-			velocity.y = jump_velocity
-			has_double_jumped = true
-#			_play_animation("double_jump")
+	elif can_double_jump and allow_jump and Input.is_action_just_pressed(jump_action_name) and not has_double_jumped:
+		velocity.y = jump_velocity
+		has_double_jumped = true
+	#	_play_animation("double_jump")
+
 
 	# === Movement ===
 	if automove:

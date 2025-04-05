@@ -17,6 +17,7 @@ var claw_start_pos: Vector2
 
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	claw_start_pos = claw.position
 	fail_timer.wait_time = total_time
 	fail_timer.start()

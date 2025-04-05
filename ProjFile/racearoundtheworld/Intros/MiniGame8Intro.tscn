@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2lk7py7pbk2r"]
+
+[ext_resource type="Texture2D" uid="uid://c6pe1uey5vnn0" path="res://art/backgrounds/Grand Canyon.png" id="1_k2g46"]
+
+[node name="MiniGameIntro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_k2g46")

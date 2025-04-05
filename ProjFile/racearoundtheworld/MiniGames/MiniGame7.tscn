@@ -1,6 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://d05p16f0h0e6n"]
+[gd_scene load_steps=7 format=3 uid="uid://d05p16f0h0e6n"]
 
 [ext_resource type="Script" uid="uid://c7hpdsiu5fhbm" path="res://MiniGames/MiniGame7.gd" id="1_6nom3"]
+[ext_resource type="Texture2D" uid="uid://g0ukl303tfrw" path="res://art/backgrounds/Gas Station.png" id="2_jnhmw"]
+[ext_resource type="Texture2D" uid="uid://csmqsy25wun8q" path="res://art/objects/Diesel.png" id="3_k5swe"]
+[ext_resource type="Texture2D" uid="uid://d0x2tl5c0rccp" path="res://art/objects/93 Super.png" id="4_0apkd"]
+[ext_resource type="Texture2D" uid="uid://cpc5xesq7u0w7" path="res://art/objects/89 Plus.png" id="5_0y6rm"]
+[ext_resource type="Texture2D" uid="uid://bcbsux38rwv5q" path="res://art/objects/87 Normal.png" id="6_ncc4u"]
 
 [node name="MiniGame7" type="Node2D"]
 script = ExtResource("1_6nom3")
+
+[node name="GasStation" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_jnhmw")
+
+[node name="Diesel" type="Sprite2D" parent="."]
+position = Vector2(226, 487)
+texture = ExtResource("3_k5swe")
+
+[node name="93Super" type="Sprite2D" parent="."]
+position = Vector2(476, 495)
+texture = ExtResource("4_0apkd")
+
+[node name="89Plus" type="Sprite2D" parent="."]
+position = Vector2(634, 498)
+texture = ExtResource("5_0y6rm")
+
+[node name="87Normal" type="Sprite2D" parent="."]
+position = Vector2(798, 496)
+texture = ExtResource("6_ncc4u")

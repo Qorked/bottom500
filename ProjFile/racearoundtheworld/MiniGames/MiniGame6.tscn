@@ -1,6 +1,102 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0qfh8c6c67l3"]
+[gd_scene load_steps=12 format=3 uid="uid://d0qfh8c6c67l3"]
 
 [ext_resource type="Script" uid="uid://c4jy4yv3mv5qt" path="res://MiniGames/MiniGame6.gd" id="1_rscdr"]
+[ext_resource type="Texture2D" uid="uid://bpamsvpcsblda" path="res://art/backgrounds/Eiffel Tower.png" id="2_biaoy"]
+[ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_blkaj"]
+[ext_resource type="Script" uid="uid://b53rtr0mf1caj" path="res://MiniGames/platformspawner.gd" id="4_2nk2l"]
+[ext_resource type="Texture2D" uid="uid://bhcalvj883opq" path="res://objects/french/sky.png" id="4_63uy6"]
+[ext_resource type="Script" uid="uid://b82yuo30n5qme" path="res://MiniGames/camup.gd" id="4_h76qo"]
+[ext_resource type="PackedScene" uid="uid://datnp3ebf711s" path="res://objects/french/frenchplatform.tscn" id="5_h76qo"]
+[ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://MiniGames/wincon.gd" id="7_3of57"]
+[ext_resource type="Texture2D" uid="uid://dcus0vepb80so" path="res://art/objects/Baguette (Goal).png" id="9_lnibr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_blkaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s64aq"]
+size = Vector2(2034, 89)
 
 [node name="MiniGame6" type="Node2D"]
 script = ExtResource("1_rscdr")
+
+[node name="EiffelTower" type="Sprite2D" parent="."]
+position = Vector2(562, -863)
+scale = Vector2(2, 2)
+texture = ExtResource("2_biaoy")
+
+[node name="Player2dBackForth" parent="." instance=ExtResource("3_blkaj")]
+position = Vector2(554, 537)
+scale = Vector2(2, 2)
+automove = false
+move_speed = 500.0
+jump_velocity = -1200.0
+max_fall_speed = 2000.0
+player_scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(552, 649)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_blkaj")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_blkaj")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1153, -5)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_blkaj")
+
+[node name="Sky" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(3086, -581)
+scale = Vector2(1, 5)
+texture = ExtResource("4_63uy6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(557, 473)
+limit_left = 0
+limit_right = 1152
+limit_bottom = 999999999
+limit_smoothed = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+script = ExtResource("4_h76qo")
+player_path = NodePath("../Player2dBackForth")
+
+[node name="spawner" type="Node2D" parent="."]
+script = ExtResource("4_2nk2l")
+spawn_scene = ExtResource("5_h76qo")
+player_path = NodePath("../Player2dBackForth")
+total_to_spawn = 15
+vertical_spacing_min = 100.0
+vertical_spacing_max = 200.0
+min_x = 100.0
+max_x = 1002.0
+cluster_chance = 0.5
+
+[node name="wincon" type="Node2D" parent="."]
+script = ExtResource("7_3of57")
+
+[node name="Sprite2D" type="Sprite2D" parent="wincon"]
+position = Vector2(565, -1691)
+texture = ExtResource("9_lnibr")
+
+[node name="Area2D" type="Area2D" parent="wincon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wincon/Area2D"]
+position = Vector2(559, -1710)
+shape = SubResource("RectangleShape2D_s64aq")
+
+[node name="frenchplatform" parent="." instance=ExtResource("5_h76qo")]
+position = Vector2(838, 413)
+
+[node name="frenchplatform2" parent="." instance=ExtResource("5_h76qo")]
+position = Vector2(282, 415)
+
+[connection signal="area_entered" from="wincon/Area2D" to="wincon" method="_on_area_2d_area_entered"]

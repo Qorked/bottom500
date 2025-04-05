@@ -17,12 +17,13 @@ config/icon="uid://c885qttnfh0c0"
 
 [autoload]
 
-Gamemanager="*res://singltons/Gamemanager.gd"
-GamemanagerTP="*res://singltons/DevGameManager.tscn"
+GamemanagerTP="*res://singltons/Gamemanager.gd"
+Gamemanager="*res://singltons/DevGameManager.tscn"
 
 [display]
 
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://jb4wkwv37cux"
 
 [global_group]
 

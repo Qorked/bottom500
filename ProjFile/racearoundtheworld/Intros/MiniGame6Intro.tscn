@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://nag4g7ydd2un"]
+
+[ext_resource type="Texture2D" uid="uid://bpamsvpcsblda" path="res://art/backgrounds/Eiffel Tower.png" id="1_ok2vb"]
+
+[node name="MiniGameIntro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, -47)
+texture = ExtResource("1_ok2vb")
