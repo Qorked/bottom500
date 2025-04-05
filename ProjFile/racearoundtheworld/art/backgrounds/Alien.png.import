@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xxv6vvfx36nu"
-path="res://.godot/imported/Claw Idle.png-a9d0b8d5e615eb9bfe14e505c10d5ee0.ctex"
+uid="uid://b7sewkggbl7uf"
+path="res://.godot/imported/Alien.png-50aa3284080902306ee49f41d5d68ec2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/objects/Claw Idle.png"
-dest_files=["res://.godot/imported/Claw Idle.png-a9d0b8d5e615eb9bfe14e505c10d5ee0.ctex"]
+source_file="res://art/backgrounds/Alien.png"
+dest_files=["res://.godot/imported/Alien.png-50aa3284080902306ee49f41d5d68ec2.ctex"]
 
 [params]
 

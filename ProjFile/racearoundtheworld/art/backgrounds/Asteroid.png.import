@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xxv6vvfx36nu"
-path="res://.godot/imported/Claw Idle.png-a9d0b8d5e615eb9bfe14e505c10d5ee0.ctex"
+uid="uid://b5yabcwmr3e0"
+path="res://.godot/imported/Asteroid.png-8e1db10079c09aed583f80e21df3a9ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/objects/Claw Idle.png"
-dest_files=["res://.godot/imported/Claw Idle.png-a9d0b8d5e615eb9bfe14e505c10d5ee0.ctex"]
+source_file="res://art/backgrounds/Asteroid.png"
+dest_files=["res://.godot/imported/Asteroid.png-8e1db10079c09aed583f80e21df3a9ff.ctex"]
 
 [params]
 
