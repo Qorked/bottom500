@@ -1,9 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://l17vjq1er4fp"]
+[gd_scene load_steps=4 format=3 uid="uid://l17vjq1er4fp"]
 
 [ext_resource type="Texture2D" uid="uid://dpyfg4f2msb42" path="res://art/backgrounds/Japan Claw Game.png" id="1_1pcqp"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="2_0nfxs"]
+[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/icons/SPACEBAR.png" id="3_w1ub3"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(577, 321)
 texture = ExtResource("1_1pcqp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 437.0
+offset_top = 400.0
+offset_right = 684.0
+offset_bottom = 519.0
+theme_override_colors/font_color = Color(0.853266, 0.00018694, 0.741103, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_0nfxs")
+theme_override_font_sizes/font_size = 100
+text = "Japan"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 675.0
+offset_top = 292.0
+offset_right = 922.0
+offset_bottom = 411.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_0nfxs")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
+[node name="Spacebar" type="Sprite2D" parent="."]
+position = Vector2(936, 363)
+texture = ExtResource("3_w1ub3")
