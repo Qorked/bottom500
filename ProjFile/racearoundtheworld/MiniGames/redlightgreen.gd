@@ -2,7 +2,7 @@ extends Node2D
 
 @export var move_speed: float = 600.0
 var moving_time: float = 0.0  # Start at 0 = not moving
-
+@onready var anim = $AnimationPlayer
 func _process(delta):
 	# Check for space press (one-time press)
 	if Input.is_action_just_pressed("space") and moving_time <= 0:
@@ -12,3 +12,4 @@ func _process(delta):
 	if moving_time > 0.0:
 		position.y -= move_speed * delta
 		moving_time -= delta
+		anim.play("drive")
