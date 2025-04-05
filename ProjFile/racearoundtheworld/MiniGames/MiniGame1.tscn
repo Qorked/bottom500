@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bwd5tu17i1d0w" path="res://objects/midtown/hole_object.tscn" id="3_82rak"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_526fi"]
 [ext_resource type="Texture2D" uid="uid://cvqcjop85mdik" path="res://art/backgrounds/Road.png" id="3_xrs7n"]
-[ext_resource type="Script" uid="uid://crgsiysi7h7dg" path="res://MiniGames/random_hole_spawner.gd" id="6_xrs7n"]
+[ext_resource type="Script" uid="uid://crgsiysi7h7dg" path="res://objects/midtown/random_hole_spawner.gd" id="6_xrs7n"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6r6fj"]
 distance = -714.0
