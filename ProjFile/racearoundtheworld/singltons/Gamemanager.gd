@@ -3,7 +3,7 @@ extends Node
 
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
-const MINI_GAME_COUNT := 3
+const MINI_GAME_COUNT := 4
 const SPEED_INCREMENT := 0.05
 var last_choice: int = -1
 var repeat_count: int = 0

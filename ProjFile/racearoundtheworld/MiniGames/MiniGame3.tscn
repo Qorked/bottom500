@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://b3wakc2dwd2y7" path="res://MiniGames/MiniGame3.gd" id="1_d0808"]
 [ext_resource type="Texture2D" uid="uid://cgxxbg83egsyn" path="res://art/backgrounds/Mt Everest.png" id="2_owi4q"]
 [ext_resource type="PackedScene" uid="uid://cwd1lbnjfeep1" path="res://objects/general/backviewcar.tscn" id="3_txuw5"]
-[ext_resource type="Script" uid="uid://8jse6tthpjya" path="res://MiniGames/snowballspawner.gd" id="4_cu6vp"]
-[ext_resource type="Script" uid="uid://k6dh5mnx6sax" path="res://MiniGames/icespawner.gd" id="4_dp1h5"]
+[ext_resource type="Script" uid="uid://8jse6tthpjya" path="res://objects/antarctic/snowballspawner.gd" id="4_cu6vp"]
+[ext_resource type="Script" uid="uid://k6dh5mnx6sax" path="res://objects/antarctic/icespawner.gd" id="4_dp1h5"]
 [ext_resource type="PackedScene" uid="uid://bvibgmyxqs8jj" path="res://objects/antarctic/snowball.tscn" id="5_16vd3"]
 [ext_resource type="PackedScene" uid="uid://b706w4cwfj1vl" path="res://objects/antarctic/ice.tscn" id="5_lva4t"]
 
