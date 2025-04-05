@@ -1,30 +1,70 @@
-[gd_scene load_steps=5 format=3 uid="uid://djvtnqcjdbfv0"]
+[gd_scene load_steps=8 format=3 uid="uid://djvtnqcjdbfv0"]
 
 [ext_resource type="Script" uid="uid://dgin2scraoxfg" path="res://MiniGames/MiniGame1.gd" id="1_hogxk"]
-[ext_resource type="Texture2D" uid="uid://c885qttnfh0c0" path="res://icon.svg" id="2_8g6en"]
-[ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/player_2d_back_forth.tscn" id="3_526fi"]
+[ext_resource type="Texture2D" uid="uid://c2tcew2wbgax2" path="res://art/backgrounds/Midtown.png" id="2_vgq2e"]
+[ext_resource type="PackedScene" uid="uid://bwd5tu17i1d0w" path="res://objects/midtown/hole_object.tscn" id="3_82rak"]
+[ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_526fi"]
+[ext_resource type="Texture2D" uid="uid://cvqcjop85mdik" path="res://art/backgrounds/Road.png" id="3_xrs7n"]
+[ext_resource type="Script" uid="uid://crgsiysi7h7dg" path="res://MiniGames/random_hole_spawner.gd" id="6_xrs7n"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6r6fj"]
-distance = -650.0
+distance = -714.0
 
 [node name="MiniGame1" type="Node2D"]
 script = ExtResource("1_hogxk")
 
-[node name="HolePlaceHolder" type="Sprite2D" parent="."]
-modulate = Color(1, 0, 0, 1)
-position = Vector2(173, 653)
-scale = Vector2(11.04, 0.0666763)
-texture = ExtResource("2_8g6en")
+[node name="Random Hole Spawner" type="Node2D" parent="."]
+position = Vector2(-752, 716)
+script = ExtResource("6_xrs7n")
+hole_scene = ExtResource("3_82rak")
+
+[node name="Midtown" type="Sprite2D" parent="."]
+position = Vector2(220, 320)
+texture = ExtResource("2_vgq2e")
+
+[node name="Midtown2" type="Sprite2D" parent="."]
+position = Vector2(1770, 320)
+texture = ExtResource("2_vgq2e")
+
+[node name="Midtown3" type="Sprite2D" parent="."]
+position = Vector2(-1337, 320)
+texture = ExtResource("2_vgq2e")
+
+[node name="Midtown4" type="Sprite2D" parent="."]
+position = Vector2(3318, 318)
+texture = ExtResource("2_vgq2e")
+
+[node name="Road" type="Sprite2D" parent="."]
+position = Vector2(562, 700)
+scale = Vector2(2.24576, 1.1905)
+texture = ExtResource("3_xrs7n")
+
+[node name="Road2" type="Sprite2D" parent="."]
+position = Vector2(-1664, 700)
+scale = Vector2(2.24576, 1.1905)
+texture = ExtResource("3_xrs7n")
+
+[node name="Road3" type="Sprite2D" parent="."]
+position = Vector2(2802, 700)
+scale = Vector2(2.24576, 1.1905)
+texture = ExtResource("3_xrs7n")
+
+[node name="Player2dBackForth" parent="." instance=ExtResource("3_526fi")]
+position = Vector2(-908, 654)
+jump_velocity = -800.0
+gravity = 1000.0
+player_scale = Vector2(4, 4)
+sprite_scale_only = true
+
+[node name="Camera2D" type="Camera2D" parent="Player2dBackForth"]
+position = Vector2(88, -228)
+drag_vertical_enabled = true
+drag_top_margin = 0.8
+drag_bottom_margin = 0.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4, -24)
 shape = SubResource("WorldBoundaryShape2D_6r6fj")
-
-[node name="Player2dBackForth" parent="." instance=ExtResource("3_526fi")]
-position = Vector2(4, 623)
-
-[node name="Camera2D" type="Camera2D" parent="Player2dBackForth"]
-position = Vector2(-4, -36)
-zoom = Vector2(4, 4)

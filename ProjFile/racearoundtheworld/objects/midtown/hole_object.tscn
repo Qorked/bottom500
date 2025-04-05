@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwd5tu17i1d0w"]
+
+[ext_resource type="Script" uid="uid://do6ay7ej7ew13" path="res://objects/midtown/hole_object.gd" id="1_evqsp"]
+[ext_resource type="Texture2D" uid="uid://c3fv1ytsuvapo" path="res://art/backgrounds/Hole.png" id="2_aghxm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43p8r"]
+radius = 106.0
+height = 214.0
+
+[node name="PotHoleObject" type="Node2D"]
+z_index = 1
+script = ExtResource("1_evqsp")
+
+[node name="Hole" type="Sprite2D" parent="."]
+texture = ExtResource("2_aghxm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -39)
+shape = SubResource("CapsuleShape2D_43p8r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -12,10 +12,18 @@ extends CharacterBody2D
 
 # === Sprite & Visuals ===
 @export var flip_sprite_on_direction: bool = true
-@export var sprite_scale: Vector2 = Vector2.ONE
+@export var player_scale: Vector2 = Vector2.ONE
+@export var sprite_scale_only: bool = false      
 
-# === Animation (Optional) ===
-@export_node_path("AnimationPlayer") var animation_player_path: NodePath
+# === Optional loop settings per animation ===
+@export var anim: Dictionary = {
+	"driving": true,
+#	"anim2": true,
+#	"anim3": false,
+#	"anim4": false,
+#	"anim5": false
+}
+
 
 # === Runtime references ===
 @onready var sprite: Sprite2D = $Sprite2D
@@ -24,9 +32,10 @@ extends CharacterBody2D
 var has_double_jumped: bool = false
 
 func _ready():
-	# Apply initial scale
-	if sprite:
-		sprite.scale = sprite_scale
+	if sprite_scale_only and sprite:
+		sprite.scale = player_scale
+	else:
+		self.scale = player_scale
 
 func _physics_process(delta: float) -> void:
 	# === Apply gravity ===

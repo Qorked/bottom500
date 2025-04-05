@@ -21,7 +21,7 @@ Gamemanager="*res://singltons/Gamemanager.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [global_group]
 

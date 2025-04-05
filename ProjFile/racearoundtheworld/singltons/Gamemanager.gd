@@ -1,8 +1,8 @@
 extends Node
 
 const TOTAL_GAMES := 20
-const MAX_REPEATS := 1
-const MINI_GAME_COUNT := 2
+const MAX_REPEATS := 2
+const MINI_GAME_COUNT := 1
 const SPEED_INCREMENT := 0.05
 
 var game_container: Node = null
@@ -38,6 +38,7 @@ func reset_game():
 func start_game():
 	reset_game()
 	_load_next_minigame()
+
 
 func _load_next_minigame():
 	if games_played >= TOTAL_GAMES:

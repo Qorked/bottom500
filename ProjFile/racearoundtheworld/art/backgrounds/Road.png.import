@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qxvagihxoils"
-path="res://.godot/imported/Car Driving.png-bd56a4423d18c1fdbe453034b50a1537.ctex"
+uid="uid://cvqcjop85mdik"
+path="res://.godot/imported/Road.png-d85d9511cfc9948067af1d8857446844.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Car Driving.png"
-dest_files=["res://.godot/imported/Car Driving.png-bd56a4423d18c1fdbe453034b50a1537.ctex"]
+source_file="res://art/backgrounds/Road.png"
+dest_files=["res://.godot/imported/Road.png-d85d9511cfc9948067af1d8857446844.ctex"]
 
 [params]
 
