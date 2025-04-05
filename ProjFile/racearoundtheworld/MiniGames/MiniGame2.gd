@@ -24,7 +24,7 @@ func _ready():
 
 func _process(delta):
 	if is_moving and not is_descending:
-		claw.position.x += direction * 150 * delta
+		claw.position.x += direction * 200 * delta
 
 		if claw.position.x >= top_right.x:
 			direction = -1
@@ -66,6 +66,7 @@ func on_key_grabbed():
 	is_game_over = true
 	fail_timer.stop()
 	Gamemanager.mini_game_won()
+	await get_tree().create_timer(1).timeout
 	queue_free()
 
 func _start_horizontal_movement():

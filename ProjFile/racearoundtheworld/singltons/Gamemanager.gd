@@ -1,9 +1,13 @@
 extends Node
+@export var force_mini_game: int = -1  # -1 = random as normal
 
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
 const MINI_GAME_COUNT := 2
 const SPEED_INCREMENT := 0.05
+var last_choice: int = -1
+var repeat_count: int = 0
+
 
 var game_container: Node = null
 var mini_game_ids: Array[int] = []
@@ -43,16 +47,26 @@ func _load_next_minigame():
 		return
 
 	var valid_choices: Array[int] = []
+
 	for i in mini_game_ids:
-		var times_played := int(played_games.get(i, 0))
-		if times_played < MAX_REPEATS:
-			valid_choices.append(i)
+		# Disallow repeating same game too many times in a row
+		if i == last_choice and repeat_count >= MAX_REPEATS:
+			continue
+		valid_choices.append(i)
 
 	if valid_choices.is_empty():
-		_end_game(true)
-		return
+		# Edge case: fallback to any mini-game (if all were blocked by repeat rule)
+		valid_choices = mini_game_ids.duplicate()
 
 	var choice := valid_choices[randi() % valid_choices.size()]
+
+	# Track repeat count
+	if choice == last_choice:
+		repeat_count += 1
+	else:
+		repeat_count = 1
+		last_choice = choice
+
 	played_games[choice] = int(played_games.get(choice, 0)) + 1
 	games_played += 1
 
@@ -63,6 +77,7 @@ func _load_next_minigame():
 	var intro_scene: PackedScene = load(intro_path)
 
 	_show_intro_then_load_game(intro_scene, game_scene)
+
 
 func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScene):
 	_clear_game_container()
