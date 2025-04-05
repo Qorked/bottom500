@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn5qrdy4x42kh"]
+
+[ext_resource type="Texture2D" uid="uid://x622gwf1fh8n" path="res://art/objects/All Car Sprites.png" id="1_a1yvs"]
+
+[sub_resource type="Animation" id="Animation_fvw64"]
+resource_name = "drive"
+length = 0.3
+
+[sub_resource type="Animation" id="Animation_oscp7"]
+resource_name = "expload"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1hdj2"]
+_data = {
+&"drive": SubResource("Animation_fvw64"),
+&"expload": SubResource("Animation_oscp7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndqp6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m1740"]
+radius = 16.0
+
+[node name="Carthatexplodes" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a1yvs")
+hframes = 12
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1hdj2")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 11)
+shape = SubResource("RectangleShape2D_ndqp6")
+
+[node name="walldetector" type="Area2D" parent="."]
+position = Vector2(5, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walldetector"]
+position = Vector2(15, 11)
+shape = SubResource("CircleShape2D_m1740")
