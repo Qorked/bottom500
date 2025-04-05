@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5w0k7oueak0b"
-path="res://.godot/imported/claw.png-67397ada2a51b4247b3a7608c03aa56d.ctex"
+uid="uid://dc5cwogy0nty2"
+path="res://.godot/imported/Snowball.png-ed8793d72c52ea53cf55a1b669a35997.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/backgrounds/claw.png"
-dest_files=["res://.godot/imported/claw.png-67397ada2a51b4247b3a7608c03aa56d.ctex"]
+source_file="res://art/objects/Snowball.png"
+dest_files=["res://.godot/imported/Snowball.png-ed8793d72c52ea53cf55a1b669a35997.ctex"]
 
 [params]
 

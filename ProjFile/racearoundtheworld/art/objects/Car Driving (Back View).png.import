@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://via242nmslns"
-path="res://.godot/imported/Plushie Pile.png-d5a929b1cedb384999b78dbfca2b3a75.ctex"
+uid="uid://o3hbja0cy8gr"
+path="res://.godot/imported/Car Driving (Back View).png-a7074eaf7e699014d4e322b61200cbfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/backgrounds/Plushie Pile.png"
-dest_files=["res://.godot/imported/Plushie Pile.png-d5a929b1cedb384999b78dbfca2b3a75.ctex"]
+source_file="res://art/objects/Car Driving (Back View).png"
+dest_files=["res://.godot/imported/Car Driving (Back View).png-a7074eaf7e699014d4e322b61200cbfa.ctex"]
 
 [params]
 

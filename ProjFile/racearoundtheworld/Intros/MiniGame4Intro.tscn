@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfggp54c2h2l6"]
+
+[ext_resource type="Texture2D" uid="uid://dcsf7vtfqc5t5" path="res://art/backgrounds/Moon.png" id="1_cu728"]
+
+[node name="MiniGameIntro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_cu728")

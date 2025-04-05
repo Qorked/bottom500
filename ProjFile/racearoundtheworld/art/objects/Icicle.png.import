@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5w0k7oueak0b"
-path="res://.godot/imported/claw.png-7f8339bc3f4457340cc76470a19810cd.ctex"
+uid="uid://craqx13jsaf23"
+path="res://.godot/imported/Icicle.png-d6ef38f896fca43b791f12eab6844cba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/objects/claw.png"
-dest_files=["res://.godot/imported/claw.png-7f8339bc3f4457340cc76470a19810cd.ctex"]
+source_file="res://art/objects/Icicle.png"
+dest_files=["res://.godot/imported/Icicle.png-d6ef38f896fca43b791f12eab6844cba.ctex"]
 
 [params]
 

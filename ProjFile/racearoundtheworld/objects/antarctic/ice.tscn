@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b706w4cwfj1vl"]
+
+[ext_resource type="Script" uid="uid://btbajpqpfuiha" path="res://objects/antarctic/ice.gd" id="1_bpnck"]
+[ext_resource type="Texture2D" uid="uid://craqx13jsaf23" path="res://art/objects/Icicle.png" id="2_fl5rx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ilfij"]
+height = 47.0
+
+[node name="ice" type="Node2D"]
+script = ExtResource("1_bpnck")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fl5rx")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ilfij")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -4,4 +4,4 @@
 
 [node name="DevGameManager" type="Node2D"]
 script = ExtResource("1_uw1tl")
-force_mini_game = 2
+force_mini_game = 4

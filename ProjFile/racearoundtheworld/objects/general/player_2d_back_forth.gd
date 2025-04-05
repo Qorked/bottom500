@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	if automove:
 		velocity.x = move_speed
 	else:
-		var direction := Input.get_axis("ui_left", "ui_right")
+		var direction := Input.get_axis("a", "d")
 		if direction != 0:
 			velocity.x = direction * move_speed
 			if flip_sprite_on_direction and sprite:

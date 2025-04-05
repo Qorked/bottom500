@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5yabcwmr3e0"
-path="res://.godot/imported/Asteroid.png-8e1db10079c09aed583f80e21df3a9ff.ctex"
+uid="uid://via242nmslns"
+path="res://.godot/imported/Plushie Pile.png-cd1fc35b678e09db00997cbeed658f15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/backgrounds/Asteroid.png"
-dest_files=["res://.godot/imported/Asteroid.png-8e1db10079c09aed583f80e21df3a9ff.ctex"]
+source_file="res://art/objects/Plushie Pile.png"
+dest_files=["res://.godot/imported/Plushie Pile.png-cd1fc35b678e09db00997cbeed658f15.ctex"]
 
 [params]
 

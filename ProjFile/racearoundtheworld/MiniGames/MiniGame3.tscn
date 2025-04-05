@@ -1,6 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://nngls2bxedl7"]
+[gd_scene load_steps=10 format=3 uid="uid://nngls2bxedl7"]
 
 [ext_resource type="Script" uid="uid://b3wakc2dwd2y7" path="res://MiniGames/MiniGame3.gd" id="1_d0808"]
+[ext_resource type="Texture2D" uid="uid://cgxxbg83egsyn" path="res://art/backgrounds/Mt Everest.png" id="2_owi4q"]
+[ext_resource type="PackedScene" uid="uid://cwd1lbnjfeep1" path="res://objects/general/backviewcar.tscn" id="3_txuw5"]
+[ext_resource type="Script" uid="uid://8jse6tthpjya" path="res://MiniGames/snowballspawner.gd" id="4_cu6vp"]
+[ext_resource type="Script" uid="uid://k6dh5mnx6sax" path="res://MiniGames/icespawner.gd" id="4_dp1h5"]
+[ext_resource type="PackedScene" uid="uid://bvibgmyxqs8jj" path="res://objects/antarctic/snowball.tscn" id="5_16vd3"]
+[ext_resource type="PackedScene" uid="uid://b706w4cwfj1vl" path="res://objects/antarctic/ice.tscn" id="5_lva4t"]
+
+[sub_resource type="Curve2D" id="Curve2D_cu6vp"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2, 510, 0, 0, 0, 0, 155, 465, 0, 0, 0, 0, 385, 436, 0, 0, 0, 0, 578, 430, 0, 0, 0, 0, 731, 433, 0, 0, 0, 0, 892, 451, 0, 0, 0, 0, 1030, 478, 0, 0, 0, 0, 1156, 523)
+}
+point_count = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cu6vp"]
+size = Vector2(16, 660)
 
 [node name="MiniGame3" type="Node2D"]
 script = ExtResource("1_d0808")
+
+[node name="MtEverest" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_owi4q")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_txuw5")]
+position = Vector2(554, 571)
+scale = Vector2(2.7, 2.7)
+
+[node name="icespawner" type="Node2D" parent="."]
+script = ExtResource("4_dp1h5")
+ice_scene = ExtResource("5_lva4t")
+
+[node name="snowballspawner" type="Node2D" parent="."]
+script = ExtResource("4_cu6vp")
+snowball_scene = ExtResource("5_16vd3")
+
+[node name="Path2D" type="Path2D" parent="snowballspawner"]
+position = Vector2(-2, -12)
+curve = SubResource("Curve2D_cu6vp")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="snowballspawner/Path2D"]
+position = Vector2(2, 510)
+rotation = -0.286051
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2, 320)
+shape = SubResource("RectangleShape2D_cu6vp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1154, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-2, 320)
+shape = SubResource("RectangleShape2D_cu6vp")

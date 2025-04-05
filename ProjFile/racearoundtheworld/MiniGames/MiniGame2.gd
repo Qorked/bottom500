@@ -24,7 +24,7 @@ func _ready():
 
 func _process(delta):
 	if is_moving and not is_descending:
-		claw.position.x += direction * 200 * delta
+		claw.position.x += direction * 300 * delta
 
 		if claw.position.x >= top_right.x:
 			direction = -1
