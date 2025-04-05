@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnvi7mhse6ilp"]
+[gd_scene load_steps=3 format=3 uid="uid://bnvi7mhse6ilp"]
 
 [ext_resource type="Script" uid="uid://bfd70p7snh3ty" path="res://cutsceens/transition.gd" id="1_0ayf2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ayf2"]
 
 [node name="Transition" type="Node2D"]
 script = ExtResource("1_0ayf2")
@@ -17,5 +19,11 @@ text = "LOADING"
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(527, 650)
+shape = SubResource("WorldBoundaryShape2D_0ayf2")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

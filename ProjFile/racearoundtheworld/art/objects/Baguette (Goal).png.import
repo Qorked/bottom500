@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbobsn6tc5ott"
-path="res://.godot/imported/WASD.png-171a0825b13754f2700967ffa1413cea.ctex"
+uid="uid://dcus0vepb80so"
+path="res://.godot/imported/Baguette (Goal).png-ebc16a778b018c35ac6ab0c79b4a86c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/icons/WASD.png"
-dest_files=["res://.godot/imported/WASD.png-171a0825b13754f2700967ffa1413cea.ctex"]
+source_file="res://art/objects/Baguette (Goal).png"
+dest_files=["res://.godot/imported/Baguette (Goal).png-ebc16a778b018c35ac6ab0c79b4a86c1.ctex"]
 
 [params]
 

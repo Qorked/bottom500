@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3jwwcptj3rag"]
 
 [ext_resource type="Texture2D" uid="uid://c2tcew2wbgax2" path="res://art/backgrounds/Midtown.png" id="1_llm7o"]
-[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/icons/SPACEBAR.png" id="2_gy6mm"]
+[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_gy6mm"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="3_0dcpf"]
 
 [node name="MiniGameIntro" type="Node2D"]

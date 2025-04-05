@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d10sa3g6pp4po"]
+
+[ext_resource type="Texture2D" uid="uid://bfujnxsyasg47" path="res://art/backgrounds/Intersection.png" id="1_i4j7e"]
+[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_5ryqv"]
+
+[node name="MiniGameIntro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_i4j7e")
+
+[node name="Spacebar" type="Sprite2D" parent="."]
+position = Vector2(561, 267)
+texture = ExtResource("3_5ryqv")

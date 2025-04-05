@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dpyfg4f2msb42" path="res://art/backgrounds/Japan Claw Game.png" id="1_1pcqp"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="2_0nfxs"]
-[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/icons/SPACEBAR.png" id="3_w1ub3"]
+[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_w1ub3"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
