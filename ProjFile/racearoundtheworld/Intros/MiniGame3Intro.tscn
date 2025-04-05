@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://7pll0i1yw1r3"]
+[gd_scene load_steps=3 format=3 uid="uid://7pll0i1yw1r3"]
 
 [ext_resource type="Texture2D" uid="uid://cgxxbg83egsyn" path="res://art/backgrounds/Mt Everest.png" id="1_54r06"]
+[ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/icons/AD.png" id="2_i4j6g"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("1_54r06")
+
+[node name="Ad" type="Sprite2D" parent="."]
+position = Vector2(552, 548)
+texture = ExtResource("2_i4j6g")

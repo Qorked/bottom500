@@ -28,7 +28,7 @@ func _ready():
 		push_warning("⚠️ Alien couldn't find player!")
 
 	# Spawn at random screen X/Y
-	position = Vector2(randf_range(200, 1152), randf_range(0, 400))
+	position = Vector2(randf_range(100, 1152), randf_range(100, 400))
 
 	# Auto play animation
 	if animator and animator.has_animation("fly"):
@@ -53,3 +53,8 @@ func _physics_process(delta: float) -> void:
 	# Floaty effect
 	float_timer += delta
 	position.y += sin(float_timer * 2.5) * 0.3
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		Gamemanager.mini_game_lost()
