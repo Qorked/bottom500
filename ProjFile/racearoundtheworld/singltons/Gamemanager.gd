@@ -2,7 +2,7 @@ extends Node
 
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
-const MINI_GAME_COUNT := 1
+const MINI_GAME_COUNT := 2
 const SPEED_INCREMENT := 0.05
 
 var game_container: Node = null

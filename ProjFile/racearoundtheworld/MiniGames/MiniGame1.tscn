@@ -31,7 +31,15 @@ position = Vector2(-1337, 320)
 texture = ExtResource("2_vgq2e")
 
 [node name="Midtown4" type="Sprite2D" parent="."]
-position = Vector2(3318, 318)
+position = Vector2(3318, 320)
+texture = ExtResource("2_vgq2e")
+
+[node name="Midtown5" type="Sprite2D" parent="."]
+position = Vector2(4871, 320)
+texture = ExtResource("2_vgq2e")
+
+[node name="Midtown6" type="Sprite2D" parent="."]
+position = Vector2(6423, 320)
 texture = ExtResource("2_vgq2e")
 
 [node name="Road" type="Sprite2D" parent="."]
@@ -49,8 +57,19 @@ position = Vector2(2802, 700)
 scale = Vector2(2.24576, 1.1905)
 texture = ExtResource("3_xrs7n")
 
+[node name="Road4" type="Sprite2D" parent="."]
+position = Vector2(5011, 700)
+scale = Vector2(2.24576, 1.1905)
+texture = ExtResource("3_xrs7n")
+
+[node name="Road5" type="Sprite2D" parent="."]
+position = Vector2(5911, 700)
+scale = Vector2(2.24576, 1.1905)
+texture = ExtResource("3_xrs7n")
+
 [node name="Player2dBackForth" parent="." instance=ExtResource("3_526fi")]
 position = Vector2(-908, 654)
+move_speed = 600.0
 gravity = 800.0
 max_fall_speed = 1800.0
 player_scale = Vector2(4, 4)

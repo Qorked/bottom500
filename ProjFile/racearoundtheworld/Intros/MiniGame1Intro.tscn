@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://c2tcew2wbgax2" path="res://art/backgrounds/Midtown.png" id="1_llm7o"]
 
-[node name="MiniGame1Intro" type="Node2D"]
+[node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(528, 326)
+position = Vector2(523, 326)
 texture = ExtResource("1_llm7o")

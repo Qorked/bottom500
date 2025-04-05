@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://l17vjq1er4fp"]
+
+[ext_resource type="Texture2D" uid="uid://dpyfg4f2msb42" path="res://art/backgrounds/Japan Claw Game.png" id="1_1pcqp"]
+
+[node name="MiniGameIntro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 321)
+texture = ExtResource("1_1pcqp")
