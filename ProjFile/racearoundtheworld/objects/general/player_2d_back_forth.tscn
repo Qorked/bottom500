@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpswndvp7rnal"]
+[gd_scene load_steps=8 format=3 uid="uid://bpswndvp7rnal"]
 
 [ext_resource type="Script" uid="uid://c55wyf8bl2a5a" path="res://objects/general/player_2d_back_forth.gd" id="1_dmnld"]
 [ext_resource type="Texture2D" uid="uid://qxvagihxoils" path="res://art/objects/Car Driving.png" id="2_8pwvy"]
@@ -42,7 +42,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqm6j"]
-size = Vector2(62, 25.25)
+size = Vector2(60, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mupo"]
+size = Vector2(62, 25)
 
 [node name="Player2dBackForth" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_dmnld")
@@ -57,5 +60,11 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.75, 11)
+position = Vector2(-1, 10.5)
 shape = SubResource("RectangleShape2D_hqm6j")
+
+[node name="Hitbox" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 10.5)
+shape = SubResource("RectangleShape2D_7mupo")

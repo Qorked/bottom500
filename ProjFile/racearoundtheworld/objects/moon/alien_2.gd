@@ -55,3 +55,9 @@ func _physics_process(delta: float) -> void:
 	# Float bob effect
 	float_timer += delta
 	position.y += sin(float_timer * 2.5) * 0.3
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		print_tree()
+		Gamemanager.mini_game_lost()

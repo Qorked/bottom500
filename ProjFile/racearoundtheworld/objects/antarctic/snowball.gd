@@ -35,6 +35,4 @@ func _process(delta):
 
 func _on_area_entered(other_area: Area2D):
 	if other_area.is_in_group("player"):
-		print("💥 Snowball hit the player!")
-		if Gamemanager:
-			Gamemanager.mini_game_lost()
+		Gamemanager.mini_game_lost()

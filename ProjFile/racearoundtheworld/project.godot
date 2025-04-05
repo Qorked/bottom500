@@ -17,8 +17,8 @@ config/icon="uid://c885qttnfh0c0"
 
 [autoload]
 
-Gamemanager="*res://singltons/Gamemanager.gd"
-GamemanagerTP="*res://singltons/DevGameManager.tscn"
+GamemanagerTP="*res://singltons/Gamemanager.gd"
+Gamemanager="*res://singltons/DevGameManager.tscn"
 
 [display]
 
