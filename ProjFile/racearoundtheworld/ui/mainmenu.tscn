@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://xjqq0luv2wtd"]
+[gd_scene load_steps=5 format=3 uid="uid://xjqq0luv2wtd"]
 
 [ext_resource type="Script" uid="uid://dxovv45ubvrpu" path="res://ui/mainmenu.gd" id="1_016uc"]
+[ext_resource type="Texture2D" uid="uid://b04xqqqvf4egj" path="res://art/backgrounds/Main Menu.png" id="2_187hc"]
+[ext_resource type="Texture2D" uid="uid://7lbp6ftigoux" path="res://art/ui/Main Game.png" id="3_4amms"]
+[ext_resource type="Texture2D" uid="uid://o15j50i66q7x" path="res://art/ui/Endless.png" id="4_uvrly"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -11,12 +14,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_016uc")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Press to start
+[node name="MainMenu" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_187hc")
 
-"
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 344.0
+offset_right = 912.0
+offset_bottom = 444.0
+texture_normal = ExtResource("3_4amms")
+
+[node name="Button2" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 793.0
+offset_top = 369.0
+offset_right = 1093.0
+offset_bottom = 469.0
+texture_normal = ExtResource("4_uvrly")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

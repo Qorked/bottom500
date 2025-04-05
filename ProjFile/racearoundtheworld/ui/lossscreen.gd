@@ -5,3 +5,7 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	Gamemanager.start_game()
+
+func _on_exploading_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.call("crash_and_explode")

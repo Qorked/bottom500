@@ -28,7 +28,8 @@ func _ready():
 		push_warning("⚠️ Alien couldn't find player!")
 
 	# Spawn at random screen X/Y
-	position = Vector2(randf_range(100, 1152), randf_range(100, 400))
+	position = Vector2(randf_range(100, 1152), randf_range(200, 200))
+
 
 	# Auto play animation
 	if animator and animator.has_animation("fly"):

@@ -25,7 +25,7 @@ position = Vector2(576, 324)
 texture = ExtResource("2_owi4q")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_txuw5")]
-position = Vector2(554, 571)
+position = Vector2(566, 573)
 scale = Vector2(2.7, 2.7)
 
 [node name="icespawner" type="Node2D" parent="."]
