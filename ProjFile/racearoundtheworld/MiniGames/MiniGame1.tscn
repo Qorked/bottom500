@@ -51,8 +51,8 @@ texture = ExtResource("3_xrs7n")
 
 [node name="Player2dBackForth" parent="." instance=ExtResource("3_526fi")]
 position = Vector2(-908, 654)
-jump_velocity = -800.0
-gravity = 1000.0
+gravity = 800.0
+max_fall_speed = 1800.0
 player_scale = Vector2(4, 4)
 sprite_scale_only = true
 

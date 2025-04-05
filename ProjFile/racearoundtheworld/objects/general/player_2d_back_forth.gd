@@ -37,6 +37,9 @@ func _ready():
 	else:
 		self.scale = player_scale
 
+	_play_animation("driving")
+
+
 func _physics_process(delta: float) -> void:
 	# === Apply gravity ===
 	if not is_on_floor():
@@ -50,11 +53,11 @@ func _physics_process(delta: float) -> void:
 	if allow_jump and Input.is_action_just_pressed(jump_action_name):
 		if is_on_floor():
 			velocity.y = jump_velocity
-			_play_animation("jump")
+#			_play_animation("jump")
 		elif can_double_jump and not has_double_jumped:
 			velocity.y = jump_velocity
 			has_double_jumped = true
-			_play_animation("double_jump")
+#			_play_animation("double_jump")
 
 	# === Movement ===
 	if automove:

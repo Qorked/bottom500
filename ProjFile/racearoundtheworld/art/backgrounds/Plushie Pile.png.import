@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3fv1ytsuvapo"
-path="res://.godot/imported/Hole.png-ac2d63b30160b53d40174c3ad72b3a82.ctex"
+uid="uid://via242nmslns"
+path="res://.godot/imported/Plushie Pile.png-d5a929b1cedb384999b78dbfca2b3a75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/backgrounds/Hole.png"
-dest_files=["res://.godot/imported/Hole.png-ac2d63b30160b53d40174c3ad72b3a82.ctex"]
+source_file="res://art/backgrounds/Plushie Pile.png"
+dest_files=["res://.godot/imported/Plushie Pile.png-d5a929b1cedb384999b78dbfca2b3a75.ctex"]
 
 [params]
 
