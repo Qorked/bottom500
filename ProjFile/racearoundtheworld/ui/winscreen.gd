@@ -6,4 +6,4 @@ func _ready() -> void:
 
 
 func _on_l_pressed() -> void:
-	Gamemanager.start_game()
+	Gamemanager.go_to_main_menu()

@@ -10,7 +10,7 @@
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577, 321)
+position = Vector2(576, 324)
 texture = ExtResource("1_1pcqp")
 
 [node name="Pole" type="Sprite2D" parent="."]

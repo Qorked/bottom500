@@ -21,29 +21,38 @@ position = Vector2(576, 324)
 texture = ExtResource("2_187hc")
 
 [node name="Pole" type="Sprite2D" parent="."]
-position = Vector2(669, 461)
+position = Vector2(670, 511)
 scale = Vector2(0.611014, 1.16702)
 texture = ExtResource("3_uvrly")
 
 [node name="Pole2" type="Sprite2D" parent="."]
-position = Vector2(858, 463)
+position = Vector2(859, 513)
 scale = Vector2(0.611014, 1.16702)
 texture = ExtResource("3_uvrly")
 
 [node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 613.0
-offset_top = 236.0
-offset_right = 913.0
-offset_bottom = 336.0
+offset_left = 615.0
+offset_top = 243.0
+offset_right = 915.0
+offset_bottom = 343.0
 texture_normal = ExtResource("3_4amms")
 
 [node name="Button2" type="TextureButton" parent="."]
 layout_mode = 0
+offset_left = 615.0
+offset_top = 335.0
+offset_right = 915.0
+offset_bottom = 435.0
+texture_normal = ExtResource("4_uvrly")
+
+[node name="Button3" type="TextureButton" parent="."]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 0
 offset_left = 614.0
-offset_top = 333.0
+offset_top = 430.0
 offset_right = 914.0
-offset_bottom = 433.0
+offset_bottom = 530.0
 texture_normal = ExtResource("4_uvrly")
 
 [node name="Label" type="Label" parent="."]
@@ -59,5 +68,7 @@ theme_override_fonts/font = ExtResource("6_uvrly")
 theme_override_font_sizes/font_size = 100
 text = "Race Around The World"
 
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

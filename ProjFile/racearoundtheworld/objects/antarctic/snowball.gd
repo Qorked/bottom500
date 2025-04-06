@@ -12,6 +12,8 @@ var grown := false
 @onready var area: Area2D = $Area2D  # <- Must match your node tree
 
 func _ready():
+	if get_parent() != Gamemanager.game_container:
+		queue_free()
 	scale = Vector2(0.2, 0.2)
 
 	if anim and anim.has_animation("balling"):

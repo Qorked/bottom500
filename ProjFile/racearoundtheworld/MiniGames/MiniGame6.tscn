@@ -20,7 +20,7 @@ size = Vector2(2034, 89)
 script = ExtResource("1_rscdr")
 
 [node name="EiffelTower" type="Sprite2D" parent="."]
-position = Vector2(562, -863)
+position = Vector2(551, -689)
 scale = Vector2(2, 2)
 texture = ExtResource("2_biaoy")
 

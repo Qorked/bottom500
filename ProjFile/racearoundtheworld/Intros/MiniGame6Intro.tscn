@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://nag4g7ydd2un"]
 
-[ext_resource type="Texture2D" uid="uid://bpamsvpcsblda" path="res://art/backgrounds/Eiffel Tower.png" id="1_ok2vb"]
+[ext_resource type="Texture2D" uid="uid://dr3l3lkxa2m36" path="res://art/backgrounds/Eiffel Tower exterior.png" id="1_peaj8"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_4ajnh"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_peaj8"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_2byq5"]
@@ -11,35 +11,36 @@
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576, -47)
-texture = ExtResource("1_ok2vb")
+position = Vector2(576, 324)
+texture = ExtResource("1_peaj8")
 
 [node name="Pole" type="Sprite2D" parent="."]
-position = Vector2(180, 630)
+position = Vector2(102, 570)
 scale = Vector2(1, 3.08)
 texture = ExtResource("2_peaj8")
 
 [node name="Pole2" type="Sprite2D" parent="."]
-position = Vector2(469, 629)
+position = Vector2(395, 570)
 scale = Vector2(1, 3.08)
 texture = ExtResource("2_peaj8")
 
 [node name="Pole3" type="Sprite2D" parent="."]
-position = Vector2(706, 628)
+position = Vector2(708, 569)
 scale = Vector2(1, 3.08)
 texture = ExtResource("2_peaj8")
 
 [node name="Pole4" type="Sprite2D" parent="."]
-position = Vector2(1087, 628)
+position = Vector2(1082, 567)
 scale = Vector2(1, 3.08)
 texture = ExtResource("2_peaj8")
 
 [node name="BlankSign" type="Sprite2D" parent="."]
-position = Vector2(339, 443)
+position = Vector2(269, 426)
 texture = ExtResource("3_2byq5")
 
 [node name="BlankSign2" type="Sprite2D" parent="."]
-position = Vector2(900, 438)
+position = Vector2(900, 472)
+scale = Vector2(1, 0.874286)
 texture = ExtResource("3_2byq5")
 
 [node name="Spacebar" type="Sprite2D" parent="."]
@@ -51,10 +52,10 @@ position = Vector2(971, 435)
 texture = ExtResource("5_23jdl")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 689.0
-offset_top = 395.0
-offset_right = 936.0
-offset_bottom = 514.0
+offset_left = 710.0
+offset_top = 413.0
+offset_right = 957.0
+offset_bottom = 532.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -63,10 +64,10 @@ theme_override_font_sizes/font_size = 100
 text = "Use"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 461.0
-offset_top = 55.0
-offset_right = 708.0
-offset_bottom = 174.0
+offset_left = 642.0
+offset_top = 73.0
+offset_right = 889.0
+offset_bottom = 192.0
 theme_override_colors/font_color = Color(0.747865, 0.333812, 0.738457, 1)
 theme_override_colors/font_outline_color = Color(0.865486, 0.666337, 0.827484, 1)
 theme_override_constants/outline_size = 20
@@ -75,10 +76,10 @@ theme_override_font_sizes/font_size = 100
 text = "Paris"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 346.0
-offset_right = 621.0
-offset_bottom = 633.0
+offset_left = 43.0
+offset_top = 321.0
+offset_right = 558.0
+offset_bottom = 608.0
 theme_override_fonts/font = ExtResource("7_peaj8")
 theme_override_font_sizes/font_size = 90
 text = "Jump Up!

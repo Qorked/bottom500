@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://3jwwcptj3rag"]
 
-[ext_resource type="Texture2D" uid="uid://c2tcew2wbgax2" path="res://art/backgrounds/Midtown.png" id="1_llm7o"]
+[ext_resource type="Texture2D" uid="uid://df6l7dvwoebnm" path="res://art/backgrounds/Midtown exterior.png" id="1_d8kov"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_gy6mm"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="3_0dcpf"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="4_3tm2g"]
@@ -10,8 +10,8 @@
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(523, 326)
-texture = ExtResource("1_llm7o")
+position = Vector2(577, 325)
+texture = ExtResource("1_d8kov")
 
 [node name="Spacebar" type="Sprite2D" parent="."]
 position = Vector2(484, 358)

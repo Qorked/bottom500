@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://6usnau6klcrx"]
+[gd_scene load_steps=11 format=3 uid="uid://6usnau6klcrx"]
 
 [ext_resource type="Script" uid="uid://c4t0nvt3jda0b" path="res://ui/lossscreen.gd" id="1_csx1s"]
 [ext_resource type="Texture2D" uid="uid://dl3gxvcj7o2jl" path="res://art/backgrounds/Crash Zone.png" id="2_b3sha"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_74om8"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_x1b6f"]
-[ext_resource type="Texture2D" uid="uid://40cykbbmaee2" path="res://art/ui/Retry.png" id="4_rl15r"]
+[ext_resource type="Texture2D" uid="uid://bumswihdkcyeb" path="res://art/ui/Quit.png" id="4_8h6tk"]
+[ext_resource type="Texture2D" uid="uid://dqvcfasf1o1fe" path="res://ui/Retry.png" id="5_8h6tk"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="6_rl15r"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74om8"]
@@ -40,7 +41,14 @@ offset_left = 399.0
 offset_top = 249.0
 offset_right = 699.0
 offset_bottom = 349.0
-texture_normal = ExtResource("4_rl15r")
+texture_normal = ExtResource("4_8h6tk")
+
+[node name="Button2" type="TextureButton" parent="."]
+offset_left = 34.0
+offset_top = 265.0
+offset_right = 334.0
+offset_bottom = 365.0
+texture_normal = ExtResource("5_8h6tk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -77,6 +85,7 @@ theme_override_fonts/font = ExtResource("6_rl15r")
 theme_override_font_sizes/font_size = 100
 text = "You Lost"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_2button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="exploading" to="." method="_on_exploading_area_entered"]
 [connection signal="body_entered" from="exploading" to="." method="_on_exploading_body_entered"]

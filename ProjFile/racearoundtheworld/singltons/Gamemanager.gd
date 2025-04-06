@@ -1,15 +1,20 @@
 extends Node
-@export var force_mini_game: int = -1  # -1 = random as normal
 
-const TOTAL_GAMES := 20
+@export var force_mini_game: int = -1  # -1 = random
 const MAX_REPEATS := 2
 const MINI_GAME_COUNT := 9
 const SPEED_INCREMENT := 0.05
+const HARD_MODE_SPEED_INCREMENT := 0.1
+
+var TOTAL_GAMES := 20
+
+var endless_mode := false
+var hard_mode := false
+
 var last_choice: int = -1
 var repeat_count: int = 0
-
-
 var game_container: Node = null
+
 var mini_game_ids: Array[int] = []
 var played_games: Dictionary = {}
 var current_score: int = 0
@@ -42,19 +47,7 @@ func start_game():
 	_load_next_minigame()
 
 func _load_next_minigame():
-	if games_played == TOTAL_GAMES - 1:
-		# 👑 Final game: MiniGame99
-		var game_path := "res://MiniGames/MiniGame99.tscn"
-		var intro_path := "res://Intros/MiniGame99Intro.tscn"
-
-		var game_scene: PackedScene = load(game_path)
-		var intro_scene: PackedScene = load(intro_path)
-
-		games_played += 1  # Count this final game
-		_show_intro_then_load_game(intro_scene, game_scene)
-		return
-		
-	if games_played >= TOTAL_GAMES:
+	if not endless_mode and games_played >= TOTAL_GAMES:
 		_end_game(true)
 		return
 
@@ -68,7 +61,6 @@ func _load_next_minigame():
 		valid_choices = mini_game_ids.duplicate()
 
 	var choice := valid_choices[randi() % valid_choices.size()]
-
 	if choice == last_choice:
 		repeat_count += 1
 	else:
@@ -86,8 +78,6 @@ func _load_next_minigame():
 
 	_show_intro_then_load_game(intro_scene, game_scene)
 
-
-
 func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScene):
 	_clear_game_container()
 
@@ -99,25 +89,20 @@ func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScen
 		delay = intro_instance.get_delay()
 
 	await get_tree().create_timer(delay).timeout
-
-	_clear_game_container()
-
 	var game_instance = game_scene.instantiate()
 	game_container.call_deferred("add_child", game_instance)
 
-	# 🎵 Update audio pitch for MFX
-	call_deferred("_update_music_pitch")
-
+	await get_tree().process_frame  # 🕒 Wait one frame so the scene loads
 	Engine.time_scale = current_speed
+	_update_music_pitch()
 
 func mini_game_won():
 	current_score += 1
-	current_speed += SPEED_INCREMENT
+	current_speed += HARD_MODE_SPEED_INCREMENT if hard_mode else SPEED_INCREMENT
 	Engine.time_scale = 1.0
 	_change_scene(transition_scene)
 
 func mini_game_lost():
-	Engine.time_scale = 1.0
 	_end_game(false)
 
 func _end_game(victory: bool):
@@ -135,7 +120,32 @@ func _clear_game_container():
 	if game_container:
 		for child in game_container.get_children():
 			child.queue_free()
-			
+
+# ✅ Utility display functions
+func get_display_total_games() -> String:
+	return "∞" if endless_mode else str(TOTAL_GAMES)
+
+func get_display_games_played() -> String:
+	return str(games_played)
+
+func get_game_progress_display() -> String:
+	return "%02d / %s" % [games_played, get_display_total_games()]
+
+# ✅ Buttons call these
+func enable_endless_mode():
+	endless_mode = true
+	TOTAL_GAMES = 999999  # or keep logic unlimited
+	start_game()
+
+func enable_hard_mode():
+	hard_mode = true
+	start_game()
+
+func enable_both_modes():
+	endless_mode = true
+	hard_mode = true
+	start_game()
+
 func _update_music_pitch():
 	if not game_container:
 		return
