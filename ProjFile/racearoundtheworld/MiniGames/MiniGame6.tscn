@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0qfh8c6c67l3"]
+[gd_scene load_steps=13 format=3 uid="uid://d0qfh8c6c67l3"]
 
 [ext_resource type="Script" uid="uid://c4jy4yv3mv5qt" path="res://MiniGames/MiniGame6.gd" id="1_rscdr"]
 [ext_resource type="Texture2D" uid="uid://bpamsvpcsblda" path="res://art/backgrounds/Eiffel Tower.png" id="2_biaoy"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://datnp3ebf711s" path="res://objects/french/frenchplatform.tscn" id="5_h76qo"]
 [ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://objects/wincon.gd" id="7_3of57"]
 [ext_resource type="Texture2D" uid="uid://dcus0vepb80so" path="res://art/objects/Baguette (Goal).png" id="9_lnibr"]
+[ext_resource type="AudioStream" uid="uid://ycsq5nigknif" path="res://audio/Paris.wav" id="10_s64aq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_blkaj"]
 
@@ -100,6 +101,7 @@ position = Vector2(838, 413)
 position = Vector2(282, 415)
 
 [node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_s64aq")
 autoplay = true
 
 [connection signal="area_entered" from="wincon/Area2D" to="wincon" method="_on_area_2d_area_entered"]

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bu8q51cxguawc"
-path="res://.godot/imported/Moon.wav-27cc71a32f58667969a486c856d4cf6b.sample"
+uid="uid://bulmp40x6c7uj"
+path="res://.godot/imported/Transition.wav-84648d2105f4283701b817df321ee3e6.sample"
 
 [deps]
 
-source_file="res://audio/Moon.wav"
-dest_files=["res://.godot/imported/Moon.wav-27cc71a32f58667969a486c856d4cf6b.sample"]
+source_file="res://cutsceens/Transition.wav"
+dest_files=["res://.godot/imported/Transition.wav-84648d2105f4283701b817df321ee3e6.sample"]
 
 [params]
 
