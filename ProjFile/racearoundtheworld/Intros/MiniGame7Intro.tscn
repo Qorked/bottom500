@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c86m0lvwmcwf"]
+[gd_scene load_steps=10 format=3 uid="uid://c86m0lvwmcwf"]
 
 [ext_resource type="Texture2D" uid="uid://g0ukl303tfrw" path="res://art/backgrounds/Gas Station.png" id="1_ql3fu"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="2_uksd6"]
@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="4_lfdak"]
 [ext_resource type="Texture2D" uid="uid://q3tv6bt27jum" path="res://art/ui/LEFTCLICK.png" id="5_u0hck"]
 [ext_resource type="Texture2D" uid="uid://bmbk0xkekg58x" path="res://art/objects/Fuel meter.png" id="6_xqo7h"]
+[ext_resource type="Texture2D" uid="uid://b6r6cg3cpswul" path="res://MiniGames/Circle.png" id="8_0q8g4"]
+[ext_resource type="Texture2D" uid="uid://6lwpd3sbyu30" path="res://MiniGames/Arrow.png" id="9_fbu2e"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -74,3 +76,12 @@ texture = ExtResource("5_u0hck")
 [node name="FuelMeter" type="Sprite2D" parent="."]
 position = Vector2(226, 450)
 texture = ExtResource("6_xqo7h")
+
+[node name="Circle" type="Sprite2D" parent="."]
+position = Vector2(1002, 67)
+scale = Vector2(1.53, 1.53)
+texture = ExtResource("8_0q8g4")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(999, 188)
+texture = ExtResource("9_fbu2e")
