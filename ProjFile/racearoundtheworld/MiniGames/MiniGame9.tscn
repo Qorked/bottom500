@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dj7f2l7iyiw1"]
+[gd_scene load_steps=26 format=3 uid="uid://dj7f2l7iyiw1"]
 
 [ext_resource type="Script" uid="uid://dmj30rnmapwxh" path="res://MiniGames/MiniGame9.gd" id="1_apotj"]
 [ext_resource type="Texture2D" uid="uid://j2fl0lr546h8" path="res://art/backgrounds/Pyramid.png" id="2_qx27s"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://b3e4b2uws1vf8" path="res://objects/losearea.gd" id="8_ir4ha"]
 [ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://objects/wincon.gd" id="8_jjmkr"]
 [ext_resource type="Texture2D" uid="uid://di5xoiuxa6gww" path="res://art/objects/Gold Tire.png" id="9_mndm5"]
+[ext_resource type="AudioStream" uid="uid://u3s0hfl0u0df" path="res://audio/Egypt.wav" id="11_qyxyb"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_b0x8a"]
 a = Vector2(-308, -32)
@@ -300,6 +301,9 @@ script = ExtResource("8_jjmkr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="winarea/Area2D"]
 position = Vector2(752, 77)
 shape = SubResource("RectangleShape2D_qyxyb")
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_qyxyb")
 
 [connection signal="area_entered" from="Node2D/mummy/Area2D" to="Node2D/mummy/Area2D" method="_on_area_entered"]
 [connection signal="area_entered" from="Node2D/mummy2/Area2D" to="Node2D/mummy2/Area2D" method="_on_area_entered"]

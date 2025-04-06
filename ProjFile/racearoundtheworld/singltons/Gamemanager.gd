@@ -114,7 +114,7 @@ func go_to_main_menu():
 
 func _change_scene(scene: PackedScene):
 	_clear_game_container()
-	game_container.call_deferred("add_child", scene.instantiate())
+d 	game_container.call_deferred("add_child", scene.instantiate())
 
 func _clear_game_container():
 	if game_container:
