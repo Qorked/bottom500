@@ -11,7 +11,7 @@ var is_game_over: bool = false
 var mash_power: float = 0.0
 var current_speed: float = 0.0
 
-@onready var animator: AnimationPlayer = $Sprite2D/AnimationPlayer
+@onready var animator: AnimationPlayer = $AnimationPlayer
 
 func _ready():
 	if animator and animator.has_animation("driving"):

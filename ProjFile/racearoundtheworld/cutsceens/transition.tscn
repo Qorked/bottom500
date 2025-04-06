@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnvi7mhse6ilp"]
+[gd_scene load_steps=9 format=3 uid="uid://bnvi7mhse6ilp"]
 
 [ext_resource type="Script" uid="uid://bfd70p7snh3ty" path="res://cutsceens/transition.gd" id="1_0ayf2"]
 [ext_resource type="Texture2D" uid="uid://b7o4on07ive27" path="res://art/backgrounds/Transition Screen.png" id="2_3arby"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_f6t20"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="4_f6t20"]
 [ext_resource type="Script" uid="uid://by7k7qavx2sdy" path="res://cutsceens/sampletext.gd" id="5_bqqjj"]
+[ext_resource type="FontFile" uid="uid://oba121ok85xw" path="res://art/Font/HWYGEXPD.TTF" id="6_5edd2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ayf2"]
 distance = 149.0
@@ -69,7 +70,8 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Control/Container"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme_override_fonts/font = ExtResource("6_5edd2")
+theme_override_font_sizes/font_size = 70
 text = "Text"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_eg5cy"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_tg4qm"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="4_7pyaq"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="5_adj10"]
+[ext_resource type="FontFile" uid="uid://oba121ok85xw" path="res://art/Font/HWYGEXPD.TTF" id="5_eg5cy"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="6_wwwnl"]
 
 [node name="MiniGameIntro" type="Node2D"]
@@ -56,7 +56,7 @@ offset_left = 301.0
 offset_top = 444.0
 offset_right = 683.0
 offset_bottom = 586.0
-theme_override_fonts/font = ExtResource("5_adj10")
+theme_override_fonts/font = ExtResource("5_eg5cy")
 theme_override_font_sizes/font_size = 80
 text = "MASH!"
 

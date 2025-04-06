@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="2_p6ln6"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_cumv0"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_du57x"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_02o00"]
+[ext_resource type="FontFile" uid="uid://oba121ok85xw" path="res://art/Font/HWYGEXPD.TTF" id="6_0t12n"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="7_rrlmt"]
 
 [node name="MiniGameIntro" type="Node2D"]
@@ -53,11 +53,11 @@ position = Vector2(892, 465)
 texture = ExtResource("3_cumv0")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 76.0
-offset_top = 243.0
-offset_right = 508.0
-offset_bottom = 474.0
-theme_override_fonts/font = ExtResource("6_02o00")
+offset_left = 78.0
+offset_top = 247.0
+offset_right = 510.0
+offset_bottom = 478.0
+theme_override_fonts/font = ExtResource("6_0t12n")
 theme_override_font_sizes/font_size = 80
 text = "Run 
 Away!"

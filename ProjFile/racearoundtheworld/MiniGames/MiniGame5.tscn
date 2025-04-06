@@ -125,7 +125,7 @@ libraries = {
 one_shot = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(844, 409)
+position = Vector2(796, 395)
 scale = Vector2(3, 3)
 script = ExtResource("5_g1bsk")
 

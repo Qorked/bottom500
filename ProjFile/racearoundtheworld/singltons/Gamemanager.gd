@@ -113,6 +113,7 @@ func mini_game_won():
 	_change_scene(transition_scene)
 
 func mini_game_lost():
+	Engine.time_scale = 1.0
 	_end_game(false)
 
 func _end_game(victory: bool):

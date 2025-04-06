@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://djvtnqcjdbfv0"]
+[gd_scene load_steps=9 format=3 uid="uid://djvtnqcjdbfv0"]
 
 [ext_resource type="Script" uid="uid://dgin2scraoxfg" path="res://MiniGames/MiniGame1.gd" id="1_hogxk"]
 [ext_resource type="Texture2D" uid="uid://c2tcew2wbgax2" path="res://art/backgrounds/Midtown.png" id="2_vgq2e"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_526fi"]
 [ext_resource type="Texture2D" uid="uid://cvqcjop85mdik" path="res://art/backgrounds/Road.png" id="3_xrs7n"]
 [ext_resource type="Script" uid="uid://crgsiysi7h7dg" path="res://objects/midtown/random_hole_spawner.gd" id="6_xrs7n"]
+[ext_resource type="AudioStream" uid="uid://btx072trotxkn" path="res://mus/MidTown.wav" id="7_82rak"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6r6fj"]
 distance = -714.0
@@ -89,3 +90,7 @@ position = Vector2(1, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(4, -24)
 shape = SubResource("WorldBoundaryShape2D_6r6fj")
+
+[node name="MidTown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_82rak")
+autoplay = true

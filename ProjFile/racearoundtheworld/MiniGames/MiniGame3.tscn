@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://nngls2bxedl7"]
+[gd_scene load_steps=11 format=3 uid="uid://nngls2bxedl7"]
 
 [ext_resource type="Script" uid="uid://b3wakc2dwd2y7" path="res://MiniGames/MiniGame3.gd" id="1_d0808"]
 [ext_resource type="Texture2D" uid="uid://cgxxbg83egsyn" path="res://art/backgrounds/Mt Everest.png" id="2_owi4q"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://k6dh5mnx6sax" path="res://objects/antarctic/icespawner.gd" id="4_dp1h5"]
 [ext_resource type="PackedScene" uid="uid://bvibgmyxqs8jj" path="res://objects/antarctic/snowball.tscn" id="5_16vd3"]
 [ext_resource type="PackedScene" uid="uid://b706w4cwfj1vl" path="res://objects/antarctic/ice.tscn" id="5_lva4t"]
+[ext_resource type="AudioStream" uid="uid://bbbt5mg80ej8v" path="res://mus/IceCave.wav" id="8_lva4t"]
 
 [sub_resource type="Curve2D" id="Curve2D_cu6vp"]
 _data = {
@@ -56,3 +57,7 @@ position = Vector2(1154, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-2, 320)
 shape = SubResource("RectangleShape2D_cu6vp")
+
+[node name="IceCave" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lva4t")
+autoplay = true

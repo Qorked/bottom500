@@ -136,6 +136,7 @@ shape = SubResource("SegmentShape2D_b0x8a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colidercontainer/Platform"]
 position = Vector2(953, 515)
 shape = SubResource("RectangleShape2D_041v7")
+one_way_collision = true
 
 [node name="Platform7" type="StaticBody2D" parent="colidercontainer"]
 position = Vector2(-617, -364)
@@ -143,6 +144,7 @@ position = Vector2(-617, -364)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colidercontainer/Platform7"]
 position = Vector2(938, 515)
 shape = SubResource("RectangleShape2D_041v7")
+one_way_collision = true
 
 [node name="Platform4" type="StaticBody2D" parent="colidercontainer"]
 position = Vector2(-731, -124)
@@ -150,6 +152,7 @@ position = Vector2(-731, -124)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colidercontainer/Platform4"]
 position = Vector2(953, 515)
 shape = SubResource("RectangleShape2D_041v7")
+one_way_collision = true
 
 [node name="Platform5" type="StaticBody2D" parent="colidercontainer"]
 position = Vector2(-70, -230)
@@ -157,6 +160,7 @@ position = Vector2(-70, -230)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colidercontainer/Platform5"]
 position = Vector2(953, 515)
 shape = SubResource("RectangleShape2D_041v7")
+one_way_collision = true
 
 [node name="Ground2" type="StaticBody2D" parent="colidercontainer"]
 unique_name_in_owner = true

@@ -8,11 +8,23 @@ extends Label
 	"Almost there!",
 	"Careful now!",
 	"Warning",
-	"No Left Turns!",
+	"Fast Fast Fast",
 	"Who Wrote This?",
 	"Right Left Turns",
 	"Only Reverse",
-	"Pizza!"
+	"Pizza!",
+	"Donut Crash!",
+	"Rest Ahead Stop!",
+	"Road Sign!",
+	"Battle Royal!",
+	"Just Jump!",
+	"Why?",
+	"Are we there yet?",
+	"Two And Four",
+	"Let me win already.",
+	"Hello World",
+	"Must be a Bug",
+	"Flavor Sign!"
 ]
 
 func _ready():

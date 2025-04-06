@@ -26,7 +26,7 @@ func _ready():
 	if not player:
 		push_warning("⚠️ Alien couldn't find player!")
 
-	position = Vector2(randf_range(0, 1152), randf_range(0, 400))
+	position = Vector2(randf_range(0, 1152), randf_range(0, 200))
 
 	if animator and animator.has_animation("fly"):
 		animator.play("fly")

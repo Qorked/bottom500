@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://6usnau6klcrx"]
+[gd_scene load_steps=10 format=3 uid="uid://6usnau6klcrx"]
 
 [ext_resource type="Script" uid="uid://c4t0nvt3jda0b" path="res://ui/lossscreen.gd" id="1_csx1s"]
 [ext_resource type="Texture2D" uid="uid://dl3gxvcj7o2jl" path="res://art/backgrounds/Crash Zone.png" id="2_b3sha"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_74om8"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_x1b6f"]
 [ext_resource type="Texture2D" uid="uid://40cykbbmaee2" path="res://art/ui/Retry.png" id="4_rl15r"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="6_rl15r"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74om8"]
 a = Vector2(1064, 517)
@@ -60,6 +61,21 @@ shape = SubResource("RectangleShape2D_x1b6f")
 [node name="Player2dBackForth" parent="." instance=ExtResource("3_x1b6f")]
 position = Vector2(-152, 398)
 player_scale = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 356.0
+offset_top = 120.0
+offset_right = 717.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(0, 0, 0.784314, 1)
+theme_override_colors/font_shadow_color = Color(0.380306, 0.161132, 0.52733, 1)
+theme_override_colors/font_outline_color = Color(0.457333, 0.630597, 1, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_rl15r")
+theme_override_font_sizes/font_size = 100
+text = "You Lost"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="exploading" to="." method="_on_exploading_area_entered"]
