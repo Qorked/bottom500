@@ -92,7 +92,7 @@ func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScen
 	_clear_game_container()
 
 	var intro_instance = intro_scene.instantiate()
-	game_container.call_deferred("add_child", intro_instance)
+  	game_container.call_deferred("add_child", intro_instance)
 
 	var delay := 4.0
 	if intro_instance.has_method("get_delay"):
@@ -113,6 +113,7 @@ func mini_game_won():
 	_change_scene(transition_scene)
 
 func mini_game_lost():
+	Engine.time_scale = 1.0
 	_end_game(false)
 
 func _end_game(victory: bool):

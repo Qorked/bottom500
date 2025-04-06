@@ -1,10 +1,52 @@
-[gd_scene load_steps=10 format=3 uid="uid://djlalxxnkkp1e"]
+[gd_scene load_steps=16 format=3 uid="uid://djlalxxnkkp1e"]
 
 [ext_resource type="Script" uid="uid://cvtl6dx2jnrl5" path="res://MiniGames/MiniGame99.gd" id="1_8i0di"]
 [ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://MiniGames/Racetrack.png" id="2_pe1x1"]
 [ext_resource type="Script" uid="uid://bj8ynfxdgn5op" path="res://Intros/mash.gd" id="3_tdxyc"]
+[ext_resource type="Texture2D" uid="uid://bj8s4f2h7k33m" path="res://art/objects/Enemy Car 2.png" id="4_dgtjg"]
 [ext_resource type="Texture2D" uid="uid://qxvagihxoils" path="res://art/objects/Car Driving.png" id="4_ll1d3"]
 [ext_resource type="Script" uid="uid://dx0m76mhy0wfw" path="res://MiniGames/rival.gd" id="5_w7ruc"]
+[ext_resource type="AudioStream" uid="uid://dxpwg1dla37b6" path="res://MiniGames/RaceTrack.wav" id="7_41j2a"]
+
+[sub_resource type="Animation" id="Animation_mu2ku"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_41j2a"]
+resource_name = "driving"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tkfkt"]
+_data = {
+&"RESET": SubResource("Animation_mu2ku"),
+&"driving": SubResource("Animation_41j2a")
+}
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1x7ik"]
 
 [sub_resource type="Animation" id="Animation_dgtjg"]
 length = 0.001
@@ -53,8 +95,28 @@ script = ExtResource("1_8i0di")
 position = Vector2(576, 324)
 texture = ExtResource("2_pe1x1")
 
+[node name="Rival" type="CharacterBody2D" parent="."]
+position = Vector2(74, 556)
+scale = Vector2(2, 2)
+script = ExtResource("5_w7ruc")
+move_speed = 90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Rival"]
+texture = ExtResource("4_dgtjg")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rival"]
+libraries = {
+&"": SubResource("AnimationLibrary_tkfkt")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rival"]
+shape = SubResource("SegmentShape2D_1x7ik")
+disabled = true
+
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(35, 624)
+position = Vector2(35, 619)
+scale = Vector2(2, 2)
 script = ExtResource("3_tdxyc")
 mash_power_increase = 1.2
 mash_decay = 0.99
@@ -75,5 +137,5 @@ hframes = 3
 position = Vector2(19, -2)
 shape = SubResource("RectangleShape2D_tdxyc")
 
-[node name="Rival" type="CharacterBody2D" parent="."]
-script = ExtResource("5_w7ruc")
+[node name="RaceTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_41j2a")

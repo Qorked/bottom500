@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://c327uobpcpkyi"]
 
-[ext_resource type="Texture2D" uid="uid://bi783a36rwd1n" path="res://Intros/Pyramid exterior.png" id="1_gcjwu"]
+[ext_resource type="Texture2D" uid="uid://bi783a36rwd1n" path="res://art/backgrounds/Pyramid exterior.png" id="1_gcjwu"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_naqar"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="2_tkd2c"]
 [ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="4_hyk10"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="5_ni1sv"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_1pgfm"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_naqar"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="7_2l7cj"]
 
 [node name="MiniGameIntro" type="Node2D"]
@@ -41,7 +41,7 @@ offset_left = 663.0
 offset_top = 451.0
 offset_right = 1117.0
 offset_bottom = 593.0
-theme_override_fonts/font = ExtResource("6_1pgfm")
+theme_override_fonts/font = ExtResource("6_naqar")
 theme_override_font_sizes/font_size = 70
 text = "Get Tresure"
 

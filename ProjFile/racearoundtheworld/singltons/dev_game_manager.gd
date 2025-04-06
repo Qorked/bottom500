@@ -142,3 +142,13 @@ func _clear_game_container():
 	if game_container:
 		for child in game_container.get_children():
 			child.queue_free()
+
+func _update_music_pitch():
+	if not game_container:
+		return
+
+	for child in game_container.get_children():
+		if child.has_node("MFX"):
+			var mfx := child.get_node("MFX")
+			if mfx is AudioStreamPlayer:
+				mfx.pitch_scale = current_speed

@@ -1,5 +1,12 @@
 extends Node2D
-func _ready() -> void:
+
+@onready var label: Label = $ProgressLabel
+
+func _ready():
+	# Pull progress from GameManager (if autoloaded)
+	var completed = Gamemanager.current_score
+	var total = Gamemanager.TOTAL_GAMES
+	label.text = "Completed: %d / %d" % [completed, total]
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 	

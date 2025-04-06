@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c6pe1uey5vnn0" path="res://art/backgrounds/Grand Canyon.png" id="1_k2g46"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_oe8jl"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_ud18b"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="4_fisru"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="4_oe8jl"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="5_8t7fn"]
 [ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="6_kbe63"]
 
@@ -29,13 +29,13 @@ scale = Vector2(0.795714, 0.795714)
 texture = ExtResource("3_ud18b")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 127.0
-offset_top = 275.0
-offset_right = 509.0
-offset_bottom = 417.0
-theme_override_fonts/font = ExtResource("4_fisru")
+offset_left = 153.0
+offset_top = 293.0
+offset_right = 535.0
+offset_bottom = 435.0
+theme_override_fonts/font = ExtResource("4_oe8jl")
 theme_override_font_sizes/font_size = 80
-text = "Ballance"
+text = "Balance"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 156.0

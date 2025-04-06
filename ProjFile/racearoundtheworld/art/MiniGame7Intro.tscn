@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c86m0lvwmcwf"]
+[gd_scene load_steps=6 format=3 uid="uid://4nq8hc30cfoj"]
 
 [ext_resource type="Texture2D" uid="uid://g0ukl303tfrw" path="res://art/backgrounds/Gas Station.png" id="1_ql3fu"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="2_uksd6"]

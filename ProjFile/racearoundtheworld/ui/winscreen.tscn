@@ -1,13 +1,29 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2cry6js3xda4"]
+[gd_scene load_steps=14 format=3 uid="uid://b2cry6js3xda4"]
 
 [ext_resource type="Script" uid="uid://dsc5w7qmsasoa" path="res://ui/winscreen.gd" id="1_r3hql"]
 [ext_resource type="Texture2D" uid="uid://0wqlkhc1r0qi" path="res://art/backgrounds/Ending Area.png" id="2_5s05u"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_qxxlq"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="4_mj3d6"]
 [ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="5_12flh"]
+[ext_resource type="FontFile" uid="uid://oba121ok85xw" path="res://art/Font/HWYGEXPD.TTF" id="6_mj3d6"]
 [ext_resource type="Script" uid="uid://t7q3qaahnn3i" path="res://ui/offtosun.gd" id="6_ul4mr"]
 [ext_resource type="Texture2D" uid="uid://o3hbja0cy8gr" path="res://art/objects/Car Driving (Back View).png" id="7_48q0f"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="8_qxxlq"]
+
+[sub_resource type="Animation" id="Animation_f2kc6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_cuiff"]
 resource_name = "drive"
@@ -24,21 +40,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_f2kc6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lb1aq"]
@@ -59,6 +60,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r3hql")
 
+[node name="l" type="Button" parent="."]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 109.0
+offset_right = 1169.0
+offset_bottom = 261.0
+theme_override_fonts/font = ExtResource("5_12flh")
+theme_override_font_sizes/font_size = 50
+text = "Play 
+Again"
+
 [node name="EndingArea" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("2_5s05u")
@@ -76,25 +88,13 @@ position = Vector2(942, 183)
 scale = Vector2(0.538679, 0.538679)
 texture = ExtResource("4_mj3d6")
 
-[node name="l" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 719.0
-offset_top = 109.0
-offset_right = 1169.0
-offset_bottom = 261.0
-theme_override_fonts/font = ExtResource("5_12flh")
-theme_override_font_sizes/font_size = 50
-text = "Play 
-Again"
-
 [node name="l2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 719.0
-offset_top = 109.0
-offset_right = 1169.0
-offset_bottom = 261.0
-theme_override_fonts/font = ExtResource("5_12flh")
+offset_left = 724.0
+offset_top = 123.0
+offset_right = 1174.0
+offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("6_mj3d6")
 theme_override_font_sizes/font_size = 50
 text = "Play 
 Again"

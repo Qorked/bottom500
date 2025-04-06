@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi783a36rwd1n"
-path="res://.godot/imported/Pyramid exterior.png-232ef6636655f60fed7030f4f934b661.ctex"
+uid="uid://b6r6cg3cpswul"
+path="res://.godot/imported/Circle.png-5cb8b75220501adfcc3823ea95c1fd2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Intros/Pyramid exterior.png"
-dest_files=["res://.godot/imported/Pyramid exterior.png-232ef6636655f60fed7030f4f934b661.ctex"]
+source_file="res://MiniGames/Circle.png"
+dest_files=["res://.godot/imported/Circle.png-5cb8b75220501adfcc3823ea95c1fd2e.ctex"]
 
 [params]
 

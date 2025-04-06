@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_5ryqv"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_anxpb"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="5_hjxky"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_axyoj"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_jcldt"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -71,10 +71,10 @@ position = Vector2(279, 394)
 texture = ExtResource("3_anxpb")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 126.0
-offset_top = 318.0
-offset_right = 402.0
-offset_bottom = 460.0
-theme_override_fonts/font = ExtResource("6_axyoj")
+offset_left = 148.0
+offset_top = 339.0
+offset_right = 424.0
+offset_bottom = 481.0
+theme_override_fonts/font = ExtResource("6_jcldt")
 theme_override_font_sizes/font_size = 100
 text = "Wait!"

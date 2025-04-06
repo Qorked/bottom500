@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_ya3pa"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_w1ub3"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="4_orewn"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="5_ya3pa"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_ya3pa"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -23,6 +23,26 @@ position = Vector2(441, 499)
 scale = Vector2(1, 6.11719)
 texture = ExtResource("2_ya3pa")
 
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(326, 198)
+texture = ExtResource("4_orewn")
+
+[node name="Spacebar" type="Sprite2D" parent="."]
+position = Vector2(414, 329)
+texture = ExtResource("3_w1ub3")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 143.0
+offset_top = 253.0
+offset_right = 390.0
+offset_bottom = 372.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_0nfxs")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
 [node name="Label" type="Label" parent="."]
 offset_left = 479.0
 offset_top = 400.0
@@ -38,32 +58,12 @@ theme_override_fonts/font = ExtResource("2_0nfxs")
 theme_override_font_sizes/font_size = 100
 text = "Japan"
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 675.0
-offset_top = 292.0
-offset_right = 922.0
-offset_bottom = 411.0
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("2_0nfxs")
-theme_override_font_sizes/font_size = 100
-text = "Use"
-
-[node name="Spacebar" type="Sprite2D" parent="."]
-position = Vector2(936, 363)
-texture = ExtResource("3_w1ub3")
-
-[node name="BlankSign" type="Sprite2D" parent="."]
-position = Vector2(326, 198)
-texture = ExtResource("4_orewn")
-
 [node name="Label3" type="Label" parent="."]
 offset_left = -14.0
 offset_top = 102.0
 offset_right = 664.0
 offset_bottom = 333.0
-theme_override_fonts/font = ExtResource("5_ya3pa")
+theme_override_fonts/font = ExtResource("6_ya3pa")
 theme_override_font_sizes/font_size = 60
 text = "Find Key 
 Space To Grab"

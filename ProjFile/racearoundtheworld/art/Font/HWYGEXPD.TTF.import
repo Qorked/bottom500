@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ck7tcky48p6r2"
+uid="uid://bg63fm307svpi"
 path="res://.godot/imported/HWYGEXPD.TTF-08d41c456705cd8fc68f8dcf81dc4dad.fontdata"
 
 [deps]
@@ -29,12 +29,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

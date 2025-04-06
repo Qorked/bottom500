@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b6aw7eyb2xqxq" path="res://art/objects/Pointy Rock.png" id="3_4xfh1"]
 [ext_resource type="Script" uid="uid://csl3f462colw4" path="res://MiniGames/rotationpoint.gd" id="4_syq0s"]
 [ext_resource type="Texture2D" uid="uid://qxvagihxoils" path="res://art/objects/Car Driving.png" id="5_lb54u"]
-[ext_resource type="AudioStream" uid="uid://d3p3b0d7yd0hu" path="res://audio/RaceTrack.wav" id="6_lb54u"]
+[ext_resource type="AudioStream" path="res://audio/RaceTrack.wav" id="6_lb54u"]
 
 [node name="MiniGame8" type="Node2D"]
 script = ExtResource("1_lh4dy")
@@ -33,6 +33,6 @@ scale = Vector2(3, 3)
 texture = ExtResource("5_lb54u")
 hframes = 3
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_lb54u")
 autoplay = true

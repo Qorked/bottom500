@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="3_0dcpf"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="4_3tm2g"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="5_d8kov"]
-[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_d8kov"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_d8kov"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -45,12 +45,12 @@ theme_override_font_sizes/font_size = 200
 text = "Use"
 
 [node name="Pole" type="Sprite2D" parent="."]
-position = Vector2(710, 627)
+position = Vector2(727, 588)
 scale = Vector2(1, 2.51021)
 texture = ExtResource("4_3tm2g")
 
 [node name="Pole2" type="Sprite2D" parent="."]
-position = Vector2(1000, 627)
+position = Vector2(996, 583)
 scale = Vector2(1, 2.51021)
 texture = ExtResource("4_3tm2g")
 
@@ -59,10 +59,10 @@ position = Vector2(864, 417)
 texture = ExtResource("5_d8kov")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 462.0
-offset_top = 298.0
-offset_right = 1296.0
-offset_bottom = 575.0
+offset_left = 459.0
+offset_top = 334.0
+offset_right = 1293.0
+offset_bottom = 611.0
 theme_override_fonts/font = ExtResource("6_d8kov")
 theme_override_font_sizes/font_size = 80
 text = "Jump Over 

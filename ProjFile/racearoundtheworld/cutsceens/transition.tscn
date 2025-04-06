@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnvi7mhse6ilp"]
+[gd_scene load_steps=10 format=3 uid="uid://bnvi7mhse6ilp"]
 
 [ext_resource type="Script" uid="uid://bfd70p7snh3ty" path="res://cutsceens/transition.gd" id="1_0ayf2"]
 [ext_resource type="Texture2D" uid="uid://b7o4on07ive27" path="res://art/backgrounds/Transition Screen.png" id="2_3arby"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_f6t20"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="4_f6t20"]
 [ext_resource type="Script" uid="uid://by7k7qavx2sdy" path="res://cutsceens/sampletext.gd" id="5_bqqjj"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_5edd2"]
+[ext_resource type="AudioStream" uid="uid://chkcn5nlxjbo" path="res://art/backgrounds/car-transition.mp3" id="8_kepqq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ayf2"]
 distance = 149.0
@@ -30,6 +32,16 @@ texture = ExtResource("2_3arby")
 
 [node name="Pole" type="Sprite2D" parent="."]
 position = Vector2(437, 389)
+texture = ExtResource("3_f6t20")
+
+[node name="Pole3" type="Sprite2D" parent="."]
+position = Vector2(41, 228)
+scale = Vector2(0.655172, 5.88)
+texture = ExtResource("3_f6t20")
+
+[node name="Pole4" type="Sprite2D" parent="."]
+position = Vector2(194, 230)
+scale = Vector2(0.655172, 5.88)
 texture = ExtResource("3_f6t20")
 
 [node name="Pole2" type="Sprite2D" parent="."]
@@ -69,11 +81,32 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Control/Container"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme_override_fonts/font = ExtResource("6_5edd2")
+theme_override_font_sizes/font_size = 70
 text = "Text"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 script = ExtResource("5_bqqjj")
+
+[node name="Car-transition-MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_kepqq")
+autoplay = true
+
+[node name="BlankSign2" type="Sprite2D" parent="."]
+position = Vector2(114.733, 52)
+scale = Vector2(0.437069, 0.286138)
+texture = ExtResource("3_bqqjj")
+
+[node name="ProgressLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 3.0
+offset_right = 177.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("6_5edd2")
+theme_override_font_sizes/font_size = 20
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
