@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://nag4g7ydd2un"]
+[gd_scene load_steps=9 format=3 uid="uid://nag4g7ydd2un"]
 
 [ext_resource type="Texture2D" uid="uid://dr3l3lkxa2m36" path="res://art/backgrounds/Eiffel Tower exterior.png" id="1_peaj8"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_4ajnh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="5_23jdl"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="6_utpts"]
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="7_peaj8"]
+[ext_resource type="AudioStream" uid="uid://2qa8tpt2a4h7" path="res://audio/6-Paris-Transition.wav" id="8_2byq5"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -84,3 +85,6 @@ theme_override_fonts/font = ExtResource("7_peaj8")
 theme_override_font_sizes/font_size = 90
 text = "Jump Up!
 Don't Fall"
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_2byq5")

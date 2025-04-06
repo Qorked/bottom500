@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2lk7py7pbk2r"]
+[gd_scene load_steps=8 format=3 uid="uid://c2lk7py7pbk2r"]
 
 [ext_resource type="Texture2D" uid="uid://duocw3df1fp05" path="res://art/backgrounds/Grand Canyon exterior.png" id="1_oe8jl"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_oe8jl"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="4_oe8jl"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="5_8t7fn"]
 [ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="6_kbe63"]
+[ext_resource type="AudioStream" uid="uid://dvejvwjdn8kog" path="res://audio/8-GrandCanyon-Transition.wav" id="7_ud18b"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -67,3 +68,6 @@ text = "Grand Canyon"
 [node name="Ad" type="Sprite2D" parent="."]
 position = Vector2(416, 215)
 texture = ExtResource("6_kbe63")
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ud18b")

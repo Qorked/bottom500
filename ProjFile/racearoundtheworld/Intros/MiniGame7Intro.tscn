@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c86m0lvwmcwf"]
+[gd_scene load_steps=11 format=3 uid="uid://c86m0lvwmcwf"]
 
 [ext_resource type="Texture2D" uid="uid://g0ukl303tfrw" path="res://art/backgrounds/Gas Station.png" id="1_ql3fu"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="2_uksd6"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmbk0xkekg58x" path="res://art/objects/Fuel meter.png" id="6_xqo7h"]
 [ext_resource type="Texture2D" uid="uid://b6r6cg3cpswul" path="res://objects/Circle.png" id="8_0q8g4"]
 [ext_resource type="Texture2D" uid="uid://6lwpd3sbyu30" path="res://objects/Arrow.png" id="9_fbu2e"]
+[ext_resource type="AudioStream" uid="uid://dpqcpae3t3krm" path="res://audio/GasStation.wav" id="10_fbu2e"]
 
 [node name="MiniGameIntro2" type="Node2D"]
 
@@ -85,3 +86,6 @@ texture = ExtResource("8_0q8g4")
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(999, 188)
 texture = ExtResource("9_fbu2e")
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_fbu2e")

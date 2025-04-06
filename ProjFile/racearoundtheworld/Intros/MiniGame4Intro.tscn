@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfggp54c2h2l6"]
+[gd_scene load_steps=9 format=3 uid="uid://dfggp54c2h2l6"]
 
 [ext_resource type="Texture2D" uid="uid://dbm0gpf5ltqu2" path="res://art/backgrounds/Moon exterior.png" id="1_0t12n"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_0t12n"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_du57x"]
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_0t12n"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="7_rrlmt"]
+[ext_resource type="AudioStream" uid="uid://tfpjqif7vrr3" path="res://audio/4-Moon-Transition.wav" id="8_du57x"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -91,3 +92,6 @@ theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("7_rrlmt")
 theme_override_font_sizes/font_size = 100
 text = "Moon!"
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_du57x")

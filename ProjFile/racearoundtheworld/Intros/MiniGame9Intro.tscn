@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c327uobpcpkyi"]
+[gd_scene load_steps=9 format=3 uid="uid://c327uobpcpkyi"]
 
 [ext_resource type="Texture2D" uid="uid://bi783a36rwd1n" path="res://art/backgrounds/Pyramid exterior.png" id="1_gcjwu"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_naqar"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="5_ni1sv"]
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_naqar"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="7_2l7cj"]
+[ext_resource type="AudioStream" uid="uid://c567a5hmsnfns" path="res://audio/9-Egypt-Transition.wav" id="8_hyk10"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -68,3 +69,6 @@ theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("7_2l7cj")
 theme_override_font_sizes/font_size = 100
 text = "Egypt"
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_hyk10")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbf456vk1xiui"]
+[gd_scene load_steps=8 format=3 uid="uid://cbf456vk1xiui"]
 
 [ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://objects/Racetrack.png" id="1_5x52w"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_eg5cy"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="4_7pyaq"]
 [ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="5_adj10"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="6_wwwnl"]
+[ext_resource type="AudioStream" uid="uid://b628a421hcsan" path="res://audio/99-RaceTrack-Transition.wav" id="7_tg4qm"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -63,3 +64,6 @@ text = "MASH!"
 [node name="Spacebar" type="Sprite2D" parent="."]
 position = Vector2(561, 367)
 texture = ExtResource("6_wwwnl")
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_tg4qm")

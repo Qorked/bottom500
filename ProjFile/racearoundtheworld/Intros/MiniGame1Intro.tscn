@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://3jwwcptj3rag"]
+[gd_scene load_steps=8 format=3 uid="uid://3jwwcptj3rag"]
 
 [ext_resource type="Texture2D" uid="uid://df6l7dvwoebnm" path="res://art/backgrounds/Midtown exterior.png" id="1_d8kov"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_gy6mm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="4_3tm2g"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="5_d8kov"]
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_d8kov"]
+[ext_resource type="AudioStream" uid="uid://doejrruf3adal" path="res://audio/1-MidTown-Transition.wav" id="7_3lyoq"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -68,3 +69,7 @@ theme_override_font_sizes/font_size = 80
 text = "Jump Over 
 Holes!"
 horizontal_alignment = 1
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3lyoq")
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://7pll0i1yw1r3"]
+[gd_scene load_steps=8 format=3 uid="uid://7pll0i1yw1r3"]
 
 [ext_resource type="Texture2D" uid="uid://cakgx8dd42ijg" path="res://art/backgrounds/Mt Everest exterior.png" id="1_632xx"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_632xx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_jnse0"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="5_ykq60"]
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_632xx"]
+[ext_resource type="AudioStream" uid="uid://vf4l75fgiava" path="res://audio/3-IceCave-Transition.wav" id="7_jnse0"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -82,3 +83,6 @@ offset_bottom = 452.5
 theme_override_fonts/font = ExtResource("6_632xx")
 theme_override_font_sizes/font_size = 60
 text = "Dodge!"
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jnse0")

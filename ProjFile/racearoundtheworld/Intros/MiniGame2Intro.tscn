@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://l17vjq1er4fp"]
+[gd_scene load_steps=8 format=3 uid="uid://l17vjq1er4fp"]
 
 [ext_resource type="Texture2D" uid="uid://dpyfg4f2msb42" path="res://art/backgrounds/Japan Claw Game.png" id="1_1pcqp"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="2_0nfxs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_w1ub3"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="4_orewn"]
 [ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="6_ya3pa"]
+[ext_resource type="AudioStream" uid="uid://b381gqjtydswc" path="res://audio/2-JapanArcade-Transition.wav" id="7_bic0p"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -68,3 +69,6 @@ theme_override_font_sizes/font_size = 60
 text = "Find Key 
 Space To Grab"
 horizontal_alignment = 1
+
+[node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_bic0p")
