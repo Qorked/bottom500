@@ -3,7 +3,7 @@ extends Node
 
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
-const MINI_GAME_COUNT := 9
+const MINI_GAME_COUNT := 3
 const SPEED_INCREMENT := 0.05
 var last_choice: int = -1
 var repeat_count: int = 0
@@ -53,7 +53,7 @@ func _load_next_minigame():
 		games_played += 1  # Count this final game
 		_show_intro_then_load_game(intro_scene, game_scene)
 		return
-
+		
 	if games_played >= TOTAL_GAMES:
 		_end_game(true)
 		return
@@ -104,6 +104,10 @@ func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScen
 
 	var game_instance = game_scene.instantiate()
 	game_container.call_deferred("add_child", game_instance)
+
+	# 🎵 Update audio pitch for MFX
+	call_deferred("_update_music_pitch")
+
 	Engine.time_scale = current_speed
 
 func mini_game_won():
@@ -131,3 +135,13 @@ func _clear_game_container():
 	if game_container:
 		for child in game_container.get_children():
 			child.queue_free()
+			
+func _update_music_pitch():
+	if not game_container:
+		return
+
+	for child in game_container.get_children():
+		if child.has_node("MFX"):
+			var mfx := child.get_node("MFX")
+			if mfx is AudioStreamPlayer:
+				mfx.pitch_scale = current_speed
