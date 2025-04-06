@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfggp54c2h2l6"]
+[gd_scene load_steps=8 format=3 uid="uid://dfggp54c2h2l6"]
 
 [ext_resource type="Texture2D" uid="uid://dcsf7vtfqc5t5" path="res://art/backgrounds/Moon.png" id="1_cu728"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_0t12n"]
 [ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="2_p6ln6"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_cumv0"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_du57x"]
+[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_02o00"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="7_rrlmt"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -10,10 +14,80 @@
 position = Vector2(576, 324)
 texture = ExtResource("1_cu728")
 
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(134, 541)
+scale = Vector2(1, 4.46875)
+texture = ExtResource("2_0t12n")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(462, 541)
+scale = Vector2(1, 4.46875)
+texture = ExtResource("2_0t12n")
+
+[node name="Pole3" type="Sprite2D" parent="."]
+position = Vector2(673, 539)
+scale = Vector2(1, 4.46875)
+texture = ExtResource("2_0t12n")
+
+[node name="Pole4" type="Sprite2D" parent="."]
+position = Vector2(982, 540)
+scale = Vector2(1, 4.46875)
+texture = ExtResource("2_0t12n")
+
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(813.143, 375.5)
+scale = Vector2(0.911429, 0.911429)
+texture = ExtResource("3_du57x")
+
+[node name="BlankSign2" type="Sprite2D" parent="."]
+position = Vector2(293, 356)
+scale = Vector2(0.911429, 0.911429)
+texture = ExtResource("3_du57x")
+
 [node name="Ad" type="Sprite2D" parent="."]
-position = Vector2(358, 408)
+position = Vector2(885, 349)
 texture = ExtResource("2_p6ln6")
 
 [node name="Spacebar" type="Sprite2D" parent="."]
-position = Vector2(723, 418)
+position = Vector2(892, 465)
 texture = ExtResource("3_cumv0")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 243.0
+offset_right = 508.0
+offset_bottom = 474.0
+theme_override_fonts/font = ExtResource("6_02o00")
+theme_override_font_sizes/font_size = 80
+text = "Run 
+Away!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 625.0
+offset_top = 334.0
+offset_right = 872.0
+offset_bottom = 453.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("7_rrlmt")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 454.0
+offset_top = 30.0
+offset_right = 704.0
+offset_bottom = 149.0
+theme_override_colors/font_color = Color(0.817159, 0.717707, 0.927167, 1)
+theme_override_colors/font_shadow_color = Color(0.127132, 4.76916e-05, 0.161824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("7_rrlmt")
+theme_override_font_sizes/font_size = 100
+text = "Moon!"

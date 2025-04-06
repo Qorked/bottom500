@@ -1,9 +1,85 @@
-[gd_scene load_steps=2 format=3 uid="uid://nag4g7ydd2un"]
+[gd_scene load_steps=8 format=3 uid="uid://nag4g7ydd2un"]
 
 [ext_resource type="Texture2D" uid="uid://bpamsvpcsblda" path="res://art/backgrounds/Eiffel Tower.png" id="1_ok2vb"]
+[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_4ajnh"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_peaj8"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_2byq5"]
+[ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="5_23jdl"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="6_utpts"]
+[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="7_cbmce"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, -47)
 texture = ExtResource("1_ok2vb")
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(180, 630)
+scale = Vector2(1, 3.08)
+texture = ExtResource("2_peaj8")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(469, 629)
+scale = Vector2(1, 3.08)
+texture = ExtResource("2_peaj8")
+
+[node name="Pole3" type="Sprite2D" parent="."]
+position = Vector2(706, 628)
+scale = Vector2(1, 3.08)
+texture = ExtResource("2_peaj8")
+
+[node name="Pole4" type="Sprite2D" parent="."]
+position = Vector2(1087, 628)
+scale = Vector2(1, 3.08)
+texture = ExtResource("2_peaj8")
+
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(339, 443)
+texture = ExtResource("3_2byq5")
+
+[node name="BlankSign2" type="Sprite2D" parent="."]
+position = Vector2(900, 438)
+texture = ExtResource("3_2byq5")
+
+[node name="Spacebar" type="Sprite2D" parent="."]
+position = Vector2(978, 549)
+texture = ExtResource("2_4ajnh")
+
+[node name="Ad" type="Sprite2D" parent="."]
+position = Vector2(971, 435)
+texture = ExtResource("5_23jdl")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 689.0
+offset_top = 395.0
+offset_right = 936.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_utpts")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 461.0
+offset_top = 55.0
+offset_right = 708.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.747865, 0.333812, 0.738457, 1)
+theme_override_colors/font_outline_color = Color(0.865486, 0.666337, 0.827484, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_utpts")
+theme_override_font_sizes/font_size = 100
+text = "Paris"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 105.0
+offset_top = 307.0
+offset_right = 620.0
+offset_bottom = 594.0
+theme_override_fonts/font = ExtResource("7_cbmce")
+theme_override_font_sizes/font_size = 90
+text = "Jump Up!
+Don't Fall"

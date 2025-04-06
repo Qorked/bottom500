@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d10sa3g6pp4po"]
+[gd_scene load_steps=7 format=3 uid="uid://d10sa3g6pp4po"]
 
 [ext_resource type="Texture2D" uid="uid://bfujnxsyasg47" path="res://art/backgrounds/Intersection.png" id="1_i4j7e"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_jcldt"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="3_5ryqv"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_anxpb"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="5_hjxky"]
+[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_axyoj"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -9,6 +13,68 @@
 position = Vector2(576, 324)
 texture = ExtResource("1_i4j7e")
 
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(115, 575)
+scale = Vector2(1, 2.88)
+texture = ExtResource("2_jcldt")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(427, 577)
+scale = Vector2(1, 2.88)
+texture = ExtResource("2_jcldt")
+
+[node name="Pole3" type="Sprite2D" parent="."]
+position = Vector2(784, 577)
+scale = Vector2(1, 2.88)
+texture = ExtResource("2_jcldt")
+
+[node name="Pole4" type="Sprite2D" parent="."]
+position = Vector2(1063, 576)
+scale = Vector2(1, 2.88)
+texture = ExtResource("2_jcldt")
+
+[node name="BlankSign2" type="Sprite2D" parent="."]
+position = Vector2(921, 372)
+scale = Vector2(0.847983, 0.847983)
+texture = ExtResource("3_anxpb")
+
 [node name="Spacebar" type="Sprite2D" parent="."]
-position = Vector2(561, 267)
+position = Vector2(1016, 393)
 texture = ExtResource("3_5ryqv")
+
+[node name="Label2" type="Label" parent="Spacebar"]
+offset_left = -283.0
+offset_top = -73.0
+offset_right = -36.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_hjxky")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
+[node name="Label3" type="Label" parent="Spacebar"]
+offset_left = -600.0
+offset_top = -311.0
+offset_right = -288.0
+offset_bottom = -192.0
+theme_override_colors/font_color = Color(0.714117, 0.666769, 0.663818, 1)
+theme_override_colors/font_outline_color = Color(0.772549, 0.376471, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_hjxky")
+theme_override_font_sizes/font_size = 100
+text = "Detroit"
+
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(279, 394)
+texture = ExtResource("3_anxpb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 126.0
+offset_top = 318.0
+offset_right = 402.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("6_axyoj")
+theme_override_font_sizes/font_size = 100
+text = "Wait!"

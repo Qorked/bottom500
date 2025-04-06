@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://3jwwcptj3rag"]
+[gd_scene load_steps=7 format=3 uid="uid://3jwwcptj3rag"]
 
 [ext_resource type="Texture2D" uid="uid://c2tcew2wbgax2" path="res://art/backgrounds/Midtown.png" id="1_llm7o"]
 [ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="2_gy6mm"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="3_0dcpf"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="4_3tm2g"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="5_d8kov"]
+[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="6_d8kov"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
@@ -11,25 +14,57 @@ position = Vector2(523, 326)
 texture = ExtResource("1_llm7o")
 
 [node name="Spacebar" type="Sprite2D" parent="."]
-position = Vector2(693, 506)
+position = Vector2(484, 358)
 texture = ExtResource("2_gy6mm")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 183.0
-offset_top = 114.0
-offset_right = 980.0
-offset_bottom = 344.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 806.0
+offset_bottom = 239.0
 theme_override_colors/font_color = Color(0.27451, 1, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0567847, 0.294279, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_0dcpf")
 theme_override_font_sizes/font_size = 200
 text = "MID TOWN"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 259.0
-offset_top = 368.0
-offset_right = 1755.0
-offset_bottom = 598.0
+offset_left = 55.0
+offset_top = 221.0
+offset_right = 1551.0
+offset_bottom = 451.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("3_0dcpf")
 theme_override_font_sizes/font_size = 200
 text = "Use"
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(710, 627)
+scale = Vector2(1, 2.51021)
+texture = ExtResource("4_3tm2g")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(1000, 627)
+scale = Vector2(1, 2.51021)
+texture = ExtResource("4_3tm2g")
+
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(864, 417)
+texture = ExtResource("5_d8kov")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 462.0
+offset_top = 298.0
+offset_right = 1296.0
+offset_bottom = 575.0
+theme_override_fonts/font = ExtResource("6_d8kov")
+theme_override_font_sizes/font_size = 80
+text = "Jump Over 
+Holes!"
+horizontal_alignment = 1

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://xjqq0luv2wtd"]
+[gd_scene load_steps=7 format=3 uid="uid://xjqq0luv2wtd"]
 
 [ext_resource type="Script" uid="uid://dxovv45ubvrpu" path="res://ui/mainmenu.gd" id="1_016uc"]
 [ext_resource type="Texture2D" uid="uid://b04xqqqvf4egj" path="res://art/backgrounds/Main Menu.png" id="2_187hc"]
 [ext_resource type="Texture2D" uid="uid://7lbp6ftigoux" path="res://art/ui/Main Game.png" id="3_4amms"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_uvrly"]
 [ext_resource type="Texture2D" uid="uid://o15j50i66q7x" path="res://art/ui/Endless.png" id="4_uvrly"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="6_uvrly"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -45,6 +46,19 @@ offset_top = 369.0
 offset_right = 1093.0
 offset_bottom = 469.0
 texture_normal = ExtResource("4_uvrly")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 84.0
+offset_right = 1074.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(0.964706, 0.686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_fonts/font = ExtResource("6_uvrly")
+theme_override_font_sizes/font_size = 100
+text = "Race Around The World"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

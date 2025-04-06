@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfd70p7snh3ty" path="res://cutsceens/transition.gd" id="1_0ayf2"]
 [ext_resource type="Texture2D" uid="uid://b7o4on07ive27" path="res://art/backgrounds/Transition Screen.png" id="2_3arby"]
-[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/objects/Blank Sign.png" id="3_bqqjj"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_bqqjj"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_f6t20"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="4_f6t20"]
 [ext_resource type="Script" uid="uid://by7k7qavx2sdy" path="res://cutsceens/sampletext.gd" id="5_bqqjj"]

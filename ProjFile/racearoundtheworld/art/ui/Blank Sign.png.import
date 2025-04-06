@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m0exniy06lju"
-path="res://.godot/imported/Blank Sign.png-1090b9aa4539067fdb2ab10e4ff22aaa.ctex"
+path="res://.godot/imported/Blank Sign.png-a058d074f38d539f1917f829865d6c91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/objects/Blank Sign.png"
-dest_files=["res://.godot/imported/Blank Sign.png-1090b9aa4539067fdb2ab10e4ff22aaa.ctex"]
+source_file="res://art/ui/Blank Sign.png"
+dest_files=["res://.godot/imported/Blank Sign.png-a058d074f38d539f1917f829865d6c91.ctex"]
 
 [params]
 

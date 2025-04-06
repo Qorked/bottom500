@@ -1,9 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2lk7py7pbk2r"]
+[gd_scene load_steps=7 format=3 uid="uid://c2lk7py7pbk2r"]
 
 [ext_resource type="Texture2D" uid="uid://c6pe1uey5vnn0" path="res://art/backgrounds/Grand Canyon.png" id="1_k2g46"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_oe8jl"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_ud18b"]
+[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="4_fisru"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="5_8t7fn"]
+[ext_resource type="Texture2D" uid="uid://sha0ctrex57p" path="res://art/ui/AD.png" id="6_kbe63"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("1_k2g46")
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(182, 512)
+scale = Vector2(1, 5.55469)
+texture = ExtResource("2_oe8jl")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(449, 513)
+scale = Vector2(1, 5.55469)
+texture = ExtResource("2_oe8jl")
+
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(319, 267)
+scale = Vector2(0.795714, 0.795714)
+texture = ExtResource("3_ud18b")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 127.0
+offset_top = 275.0
+offset_right = 509.0
+offset_bottom = 417.0
+theme_override_fonts/font = ExtResource("4_fisru")
+theme_override_font_sizes/font_size = 80
+text = "Ballance"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 156.0
+offset_top = 155.0
+offset_right = 403.0
+offset_bottom = 274.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_8t7fn")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 513.0
+offset_top = 506.0
+offset_right = 1108.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(1, 0.243137, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.988235, 0.690196, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_8t7fn")
+theme_override_font_sizes/font_size = 100
+text = "Grand Canyon"
+
+[node name="Ad" type="Sprite2D" parent="."]
+position = Vector2(416, 215)
+texture = ExtResource("6_kbe63")

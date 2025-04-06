@@ -1,9 +1,65 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbf456vk1xiui"]
+[gd_scene load_steps=7 format=3 uid="uid://cbf456vk1xiui"]
 
 [ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://MiniGames/Racetrack.png" id="1_5x52w"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_eg5cy"]
+[ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_tg4qm"]
+[ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="4_7pyaq"]
+[ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="5_adj10"]
+[ext_resource type="Texture2D" uid="uid://b7shhd2vm7s1h" path="res://art/ui/SPACEBAR.png" id="6_wwwnl"]
 
 [node name="MiniGameIntro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("1_5x52w")
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(315, 608)
+scale = Vector2(1, 1.42188)
+texture = ExtResource("2_eg5cy")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(591, 612)
+scale = Vector2(1, 1.42188)
+texture = ExtResource("2_eg5cy")
+
+[node name="BlankSign" type="Sprite2D" parent="."]
+position = Vector2(459, 426)
+texture = ExtResource("3_tg4qm")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 271.0
+offset_top = 302.0
+offset_right = 518.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_7pyaq")
+theme_override_font_sizes/font_size = 100
+text = "Use"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 370.0
+offset_top = 55.0
+offset_right = 789.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_7pyaq")
+theme_override_font_sizes/font_size = 100
+text = "FINAL LAP!"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 301.0
+offset_top = 444.0
+offset_right = 683.0
+offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("5_adj10")
+theme_override_font_sizes/font_size = 80
+text = "MASH!"
+
+[node name="Spacebar" type="Sprite2D" parent="."]
+position = Vector2(561, 367)
+texture = ExtResource("6_wwwnl")
