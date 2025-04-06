@@ -72,4 +72,3 @@ horizontal_alignment = 1
 
 [node name="MFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_3lyoq")
-autoplay = true
