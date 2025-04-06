@@ -55,7 +55,6 @@ texture = ExtResource("3_bqqjj")
 [node name="Player2dBackForth" parent="." instance=ExtResource("4_f6t20")]
 position = Vector2(-47, 429)
 move_speed = 800.0
-allow_jump = false
 player_scale = Vector2(3, 3)
 
 [node name="Control" type="Control" parent="."]

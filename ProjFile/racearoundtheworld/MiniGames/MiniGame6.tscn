@@ -101,7 +101,7 @@ position = Vector2(838, 413)
 [node name="frenchplatform2" parent="." instance=ExtResource("5_h76qo")]
 position = Vector2(282, 415)
 
-[node name="MFX" type="AudioStreamPlayer2D" parent="."]
+[node name="MFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_s64aq")
 autoplay = true
 
