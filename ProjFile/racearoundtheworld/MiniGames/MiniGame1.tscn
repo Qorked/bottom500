@@ -91,6 +91,6 @@ position = Vector2(1, 1)
 position = Vector2(4, -24)
 shape = SubResource("WorldBoundaryShape2D_6r6fj")
 
-[node name="MidTown" type="AudioStreamPlayer" parent="."]
+[node name="MFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_82rak")
 autoplay = true

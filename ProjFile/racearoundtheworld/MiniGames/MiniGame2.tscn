@@ -107,7 +107,7 @@ texture = ExtResource("3_4a55i")
 
 [node name="FailTimer" type="Timer" parent="."]
 
-[node name="JapanArcade" type="AudioStreamPlayer" parent="."]
+[node name="MFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_1t0yi")
 autoplay = true
 
