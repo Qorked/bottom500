@@ -3,7 +3,7 @@ extends Node
 
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
-const MINI_GAME_COUNT := 3
+const MINI_GAME_COUNT := 9
 const SPEED_INCREMENT := 0.05
 var last_choice: int = -1
 var repeat_count: int = 0
@@ -92,7 +92,7 @@ func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScen
 	_clear_game_container()
 
 	var intro_instance = intro_scene.instantiate()
-  	game_container.call_deferred("add_child", intro_instance)
+	game_container.call_deferred("add_child", intro_instance)
 
 	var delay := 4.0
 	if intro_instance.has_method("get_delay"):

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ll5taf5lnlv"
-path="res://.godot/imported/Racetrack.png-5076e577bf870b98121d71d80293f6ea.ctex"
+uid="uid://6lwpd3sbyu30"
+path="res://.godot/imported/Arrow.png-aac19a34ed44f89e0a02982875f15cff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MiniGames/Racetrack.png"
-dest_files=["res://.godot/imported/Racetrack.png-5076e577bf870b98121d71d80293f6ea.ctex"]
+source_file="res://objects/Arrow.png"
+dest_files=["res://.godot/imported/Arrow.png-aac19a34ed44f89e0a02982875f15cff.ctex"]
 
 [params]
 

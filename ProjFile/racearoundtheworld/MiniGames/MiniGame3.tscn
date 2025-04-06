@@ -58,6 +58,6 @@ position = Vector2(1154, 16)
 position = Vector2(-2, 320)
 shape = SubResource("RectangleShape2D_cu6vp")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_lva4t")
 autoplay = true

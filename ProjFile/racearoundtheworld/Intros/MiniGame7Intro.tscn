@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://g0ukl303tfrw" path="res://art/backgrounds/Gas Station.png" id="1_ql3fu"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="2_uksd6"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="3_mf5a0"]
-[ext_resource type="FontFile" uid="uid://oba121ok85xw" path="res://art/Font/HWYGEXPD.TTF" id="4_7gl12"]
+[ext_resource type="FontFile" uid="uid://bg63fm307svpi" path="res://art/Font/HWYGEXPD.TTF" id="4_7gl12"]
 [ext_resource type="FontFile" uid="uid://dkejpj5d5v2ua" path="res://art/Font/ArialCEMTBlack.ttf" id="4_lfdak"]
 [ext_resource type="Texture2D" uid="uid://q3tv6bt27jum" path="res://art/ui/LEFTCLICK.png" id="5_u0hck"]
 [ext_resource type="Texture2D" uid="uid://bmbk0xkekg58x" path="res://art/objects/Fuel meter.png" id="6_xqo7h"]
-[ext_resource type="Texture2D" uid="uid://b6r6cg3cpswul" path="res://MiniGames/Circle.png" id="8_0q8g4"]
-[ext_resource type="Texture2D" uid="uid://6lwpd3sbyu30" path="res://MiniGames/Arrow.png" id="9_fbu2e"]
+[ext_resource type="Texture2D" uid="uid://b6r6cg3cpswul" path="res://objects/Circle.png" id="8_0q8g4"]
+[ext_resource type="Texture2D" uid="uid://6lwpd3sbyu30" path="res://objects/Arrow.png" id="9_fbu2e"]
 
-[node name="MiniGameIntro" type="Node2D"]
+[node name="MiniGameIntro2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 324)

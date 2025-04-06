@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://uq68hbpbsbkg" path="res://art/backgrounds/parbg.png" id="3_b0x8a"]
 [ext_resource type="Texture2D" uid="uid://din82u7nqxfi3" path="res://art/objects/platform.png" id="5_041v7"]
 [ext_resource type="Texture2D" uid="uid://dtlre7fo60kkd" path="res://art/objects/Mummy.png" id="6_041v7"]
-[ext_resource type="Script" uid="uid://hgji24jjehr1" path="res://MiniGames/mummy.gd" id="6_ikqkf"]
-[ext_resource type="Script" uid="uid://b3e4b2uws1vf8" path="res://MiniGames/losearea.gd" id="8_ir4ha"]
-[ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://MiniGames/wincon.gd" id="8_jjmkr"]
+[ext_resource type="Script" uid="uid://hgji24jjehr1" path="res://objects/mummy.gd" id="6_ikqkf"]
+[ext_resource type="Script" uid="uid://b3e4b2uws1vf8" path="res://objects/losearea.gd" id="8_ir4ha"]
+[ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://objects/wincon.gd" id="8_jjmkr"]
 [ext_resource type="Texture2D" uid="uid://di5xoiuxa6gww" path="res://art/objects/Gold Tire.png" id="9_mndm5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_b0x8a"]

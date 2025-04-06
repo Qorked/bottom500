@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b5w0k7oueak0b" path="res://art/objects/claw.png" id="4_44ij4"]
 [ext_resource type="Script" uid="uid://1ms2ixykxw70" path="res://objects/japan/key_spawner.gd" id="6_44ij4"]
 [ext_resource type="PackedScene" uid="uid://bycbr1aw4wmwb" path="res://objects/japan/key.tscn" id="7_1t0yi"]
-[ext_resource type="AudioStream" path="res://audio/JapanArcade.wav" id="8_1t0yi"]
+[ext_resource type="AudioStream" uid="uid://d04f6wmxjjm8u" path="res://audio/JapanArcade.wav" id="8_1t0yi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_44ij4"]
 radius = 90.0222

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6r6cg3cpswul"
-path="res://.godot/imported/Circle.png-5cb8b75220501adfcc3823ea95c1fd2e.ctex"
+uid="uid://7ll5taf5lnlv"
+path="res://.godot/imported/Racetrack.png-f1740ddf8c4ca06c25c35af9242d57e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MiniGames/Circle.png"
-dest_files=["res://.godot/imported/Circle.png-5cb8b75220501adfcc3823ea95c1fd2e.ctex"]
+source_file="res://objects/Racetrack.png"
+dest_files=["res://.godot/imported/Racetrack.png-f1740ddf8c4ca06c25c35af9242d57e0.ctex"]
 
 [params]
 

@@ -26,25 +26,24 @@ scale = Vector2(0.611014, 1.16702)
 texture = ExtResource("3_uvrly")
 
 [node name="Pole2" type="Sprite2D" parent="."]
-position = Vector2(858, 469)
+position = Vector2(858, 463)
 scale = Vector2(0.611014, 1.16702)
 texture = ExtResource("3_uvrly")
 
 [node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 612.0
-offset_top = 344.0
-offset_right = 912.0
-offset_bottom = 444.0
+offset_left = 613.0
+offset_top = 236.0
+offset_right = 913.0
+offset_bottom = 336.0
 texture_normal = ExtResource("3_4amms")
 
 [node name="Button2" type="TextureButton" parent="."]
-visible = false
 layout_mode = 0
-offset_left = 793.0
-offset_top = 369.0
-offset_right = 1093.0
-offset_bottom = 469.0
+offset_left = 614.0
+offset_top = 333.0
+offset_right = 914.0
+offset_bottom = 433.0
 texture_normal = ExtResource("4_uvrly")
 
 [node name="Label" type="Label" parent="."]

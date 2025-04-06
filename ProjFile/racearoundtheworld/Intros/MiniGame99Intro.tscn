@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbf456vk1xiui"]
 
-[ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://MiniGames/Racetrack.png" id="1_5x52w"]
+[ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://objects/Racetrack.png" id="1_5x52w"]
 [ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="2_eg5cy"]
 [ext_resource type="Texture2D" uid="uid://m0exniy06lju" path="res://art/ui/Blank Sign.png" id="3_tg4qm"]
 [ext_resource type="FontFile" uid="uid://4g0t4sooo1yp" path="res://art/Font/Super Lobster.ttf" id="4_7pyaq"]

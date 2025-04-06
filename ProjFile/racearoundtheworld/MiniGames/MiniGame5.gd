@@ -6,7 +6,7 @@ var win := false  # Or set based on your game logic
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("space"):
 		if game_timer.time_left > 0:
 			game_timer.paused = true

@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_blkaj"]
 [ext_resource type="Script" uid="uid://b53rtr0mf1caj" path="res://MiniGames/platformspawner.gd" id="4_2nk2l"]
 [ext_resource type="Texture2D" uid="uid://bhcalvj883opq" path="res://objects/french/sky.png" id="4_63uy6"]
-[ext_resource type="Script" uid="uid://b82yuo30n5qme" path="res://MiniGames/camup.gd" id="4_h76qo"]
+[ext_resource type="Script" uid="uid://b82yuo30n5qme" path="res://objects/camup.gd" id="4_h76qo"]
 [ext_resource type="PackedScene" uid="uid://datnp3ebf711s" path="res://objects/french/frenchplatform.tscn" id="5_h76qo"]
-[ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://MiniGames/wincon.gd" id="7_3of57"]
+[ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://objects/wincon.gd" id="7_3of57"]
 [ext_resource type="Texture2D" uid="uid://dcus0vepb80so" path="res://art/objects/Baguette (Goal).png" id="9_lnibr"]
 [ext_resource type="AudioStream" uid="uid://ycsq5nigknif" path="res://audio/Paris.wav" id="10_s64aq"]
 

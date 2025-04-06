@@ -15,7 +15,7 @@ var is_waiting := false
 func _ready():
 	origin_x = global_position.x
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_waiting:
 		_play_animation("idle")
 		return
