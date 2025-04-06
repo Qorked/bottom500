@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsw7287j8bftx"]
+[gd_scene load_steps=14 format=3 uid="uid://dsw7287j8bftx"]
 
 [ext_resource type="Script" uid="uid://bej6w23dsx3hl" path="res://MiniGames/MiniGame4.gd" id="1_ea0jf"]
 [ext_resource type="Texture2D" uid="uid://dcsf7vtfqc5t5" path="res://art/backgrounds/Moon.png" id="2_sfkgf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cy5nf0u2u7uog" path="res://objects/moon/alien_1.gd" id="4_mktps"]
 [ext_resource type="Texture2D" uid="uid://b7sewkggbl7uf" path="res://art/objects/Alien.png" id="5_olti0"]
 [ext_resource type="Script" uid="uid://bwnxb41jfugql" path="res://objects/moon/alien_2.gd" id="6_0ngrj"]
+[ext_resource type="AudioStream" uid="uid://dexp80jko4wh7" path="res://audio/Moon.wav" id="7_c6ett"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sfkgf"]
 distance = -649.0
@@ -166,6 +167,10 @@ scale = Vector2(1.28146, 1.98306)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Alien2/Area2D"]
 position = Vector2(-4.29199, -1.2607)
 shape = SubResource("RectangleShape2D_olti0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_c6ett")
+autoplay = true
 
 [connection signal="area_entered" from="Alien/Area2D" to="Alien" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Alien2/Area2D" to="Alien" method="_on_area_2d_area_entered"]

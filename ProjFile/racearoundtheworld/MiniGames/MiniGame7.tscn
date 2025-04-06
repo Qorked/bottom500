@@ -58,6 +58,9 @@ texture = ExtResource("6_ncc4u")
 [node name="TimeoutTimer" type="Timer" parent="."]
 wait_time = 4.0
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
 [connection signal="pressed" from="OptionOne" to="." method="_on_option_one_pressed"]
 [connection signal="pressed" from="OptionTwo" to="." method="_on_option_two_pressed"]
 [connection signal="pressed" from="OptionThree" to="." method="_on_option_three_pressed"]

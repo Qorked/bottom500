@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5xwyviqmlhdb"]
+[gd_scene load_steps=16 format=3 uid="uid://c5xwyviqmlhdb"]
 
 [ext_resource type="Script" uid="uid://wq7pkuu6i0w4" path="res://MiniGames/MiniGame5.gd" id="1_3hrlh"]
 [ext_resource type="Texture2D" uid="uid://bfujnxsyasg47" path="res://art/backgrounds/Intersection.png" id="2_ullme"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dfu1sl2ikvdo2" path="res://art/objects/Stoplight.png" id="4_m54hi"]
 [ext_resource type="Script" uid="uid://dk2fig337suhh" path="res://objects/midtown/redlightgreen.gd" id="5_g1bsk"]
 [ext_resource type="Texture2D" uid="uid://o3hbja0cy8gr" path="res://art/objects/Car Driving (Back View).png" id="6_fa6po"]
+[ext_resource type="AudioStream" uid="uid://bhums3ok1tts3" path="res://audio/StopLight.mp3" id="7_4tmc4"]
 
 [sub_resource type="Animation" id="Animation_8sir6"]
 length = 0.001
@@ -146,5 +147,9 @@ libraries = {
 [node name="timer" type="Timer" parent="."]
 wait_time = 6.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4tmc4")
+autoplay = true
 
 [connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
