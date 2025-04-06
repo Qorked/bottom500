@@ -3,7 +3,7 @@ extends Node
 
 const TOTAL_GAMES := 20
 const MAX_REPEATS := 2
-const MINI_GAME_COUNT := 5
+const MINI_GAME_COUNT := 9
 const SPEED_INCREMENT := 0.05
 var last_choice: int = -1
 var repeat_count: int = 0
@@ -42,25 +42,33 @@ func start_game():
 	_load_next_minigame()
 
 func _load_next_minigame():
+	if games_played == TOTAL_GAMES - 1:
+		# 👑 Final game: MiniGame99
+		var game_path := "res://MiniGames/MiniGame99.tscn"
+		var intro_path := "res://Intros/MiniGame99Intro.tscn"
+
+		var game_scene: PackedScene = load(game_path)
+		var intro_scene: PackedScene = load(intro_path)
+
+		games_played += 1  # Count this final game
+		_show_intro_then_load_game(intro_scene, game_scene)
+		return
+
 	if games_played >= TOTAL_GAMES:
 		_end_game(true)
 		return
 
 	var valid_choices: Array[int] = []
-
 	for i in mini_game_ids:
-		# Disallow repeating same game too many times in a row
 		if i == last_choice and repeat_count >= MAX_REPEATS:
 			continue
 		valid_choices.append(i)
 
 	if valid_choices.is_empty():
-		# Edge case: fallback to any mini-game (if all were blocked by repeat rule)
 		valid_choices = mini_game_ids.duplicate()
 
 	var choice := valid_choices[randi() % valid_choices.size()]
 
-	# Track repeat count
 	if choice == last_choice:
 		repeat_count += 1
 	else:
@@ -77,6 +85,7 @@ func _load_next_minigame():
 	var intro_scene: PackedScene = load(intro_path)
 
 	_show_intro_then_load_game(intro_scene, game_scene)
+
 
 
 func _show_intro_then_load_game(intro_scene: PackedScene, game_scene: PackedScene):

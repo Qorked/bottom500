@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://djlalxxnkkp1e"]
+
+[ext_resource type="Script" uid="uid://cvtl6dx2jnrl5" path="res://MiniGames/MiniGame99.gd" id="1_8i0di"]
+[ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://MiniGames/Racetrack.png" id="2_pe1x1"]
+[ext_resource type="Script" uid="uid://bj8ynfxdgn5op" path="res://Intros/mash.gd" id="3_tdxyc"]
+[ext_resource type="Texture2D" uid="uid://qxvagihxoils" path="res://art/objects/Car Driving.png" id="4_ll1d3"]
+[ext_resource type="Script" uid="uid://dx0m76mhy0wfw" path="res://MiniGames/rival.gd" id="5_w7ruc"]
+
+[sub_resource type="Animation" id="Animation_dgtjg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_w7ruc"]
+resource_name = "drive"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_41j2a"]
+_data = {
+&"RESET": SubResource("Animation_dgtjg"),
+&"driving": SubResource("Animation_w7ruc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdxyc"]
+
+[node name="MiniGame99" type="Node2D"]
+script = ExtResource("1_8i0di")
+
+[node name="Racetrack" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_pe1x1")
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(35, 624)
+script = ExtResource("3_tdxyc")
+mash_power_increase = 1.2
+mash_decay = 0.99
+max_speed = 2000.0
+win_x_position = 1000.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+libraries = {
+&"": SubResource("AnimationLibrary_41j2a")
+}
+
+[node name="player" type="Sprite2D" parent="player"]
+position = Vector2(20, -12)
+texture = ExtResource("4_ll1d3")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(19, -2)
+shape = SubResource("RectangleShape2D_tdxyc")
+
+[node name="Rival" type="CharacterBody2D" parent="."]
+script = ExtResource("5_w7ruc")

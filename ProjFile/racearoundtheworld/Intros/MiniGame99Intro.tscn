@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbf456vk1xiui"]
+
+[ext_resource type="Texture2D" uid="uid://7ll5taf5lnlv" path="res://MiniGames/Racetrack.png" id="1_5x52w"]
+
+[node name="MiniGameIntro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_5x52w")

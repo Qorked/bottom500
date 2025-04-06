@@ -1,14 +1,15 @@
-[gd_scene load_steps=24 format=3 uid="uid://dj7f2l7iyiw1"]
+[gd_scene load_steps=25 format=3 uid="uid://dj7f2l7iyiw1"]
 
 [ext_resource type="Script" uid="uid://dmj30rnmapwxh" path="res://MiniGames/MiniGame9.gd" id="1_apotj"]
 [ext_resource type="Texture2D" uid="uid://j2fl0lr546h8" path="res://art/backgrounds/Pyramid.png" id="2_qx27s"]
 [ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_6f1yf"]
-[ext_resource type="Texture2D" uid="uid://uq68hbpbsbkg" path="res://art/objects/parbg.png" id="3_b0x8a"]
+[ext_resource type="Texture2D" uid="uid://uq68hbpbsbkg" path="res://art/backgrounds/parbg.png" id="3_b0x8a"]
 [ext_resource type="Texture2D" uid="uid://din82u7nqxfi3" path="res://art/objects/platform.png" id="5_041v7"]
 [ext_resource type="Texture2D" uid="uid://dtlre7fo60kkd" path="res://art/objects/Mummy.png" id="6_041v7"]
 [ext_resource type="Script" uid="uid://hgji24jjehr1" path="res://MiniGames/mummy.gd" id="6_ikqkf"]
 [ext_resource type="Script" uid="uid://b3e4b2uws1vf8" path="res://MiniGames/losearea.gd" id="8_ir4ha"]
 [ext_resource type="Script" uid="uid://ddxhsuhq1o66k" path="res://MiniGames/wincon.gd" id="8_jjmkr"]
+[ext_resource type="Texture2D" uid="uid://di5xoiuxa6gww" path="res://art/objects/Gold Tire.png" id="9_mndm5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_b0x8a"]
 a = Vector2(-308, -32)
@@ -39,6 +40,21 @@ b = Vector2(860, 0)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jjmkr"]
 
+[sub_resource type="Animation" id="Animation_jjmkr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_ikqkf"]
 resource_name = "walk"
 length = 0.8
@@ -54,21 +70,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_jjmkr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ir4ha"]
@@ -109,6 +110,10 @@ texture = ExtResource("5_041v7")
 [node name="Platform8" type="Sprite2D" parent="."]
 position = Vector2(321, 151)
 texture = ExtResource("5_041v7")
+
+[node name="GoldTire" type="Sprite2D" parent="."]
+position = Vector2(558, 63)
+texture = ExtResource("9_mndm5")
 
 [node name="Player2dBackForth" parent="." instance=ExtResource("3_6f1yf")]
 position = Vector2(190, 536)

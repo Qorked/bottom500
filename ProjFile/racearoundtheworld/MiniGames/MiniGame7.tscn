@@ -14,18 +14,51 @@ script = ExtResource("1_6nom3")
 position = Vector2(576, 324)
 texture = ExtResource("2_jnhmw")
 
+[node name="OptionOne" type="TextureButton" parent="."]
+offset_left = 381.0
+offset_top = 389.0
+offset_right = 581.0
+offset_bottom = 589.0
+texture_normal = ExtResource("6_ncc4u")
+
+[node name="OptionTwo" type="TextureButton" parent="."]
+offset_left = 541.0
+offset_top = 389.0
+offset_right = 741.0
+offset_bottom = 589.0
+texture_normal = ExtResource("5_0y6rm")
+
+[node name="OptionThree" type="TextureButton" parent="."]
+offset_left = 701.0
+offset_top = 387.0
+offset_right = 901.0
+offset_bottom = 587.0
+texture_normal = ExtResource("4_0apkd")
+
 [node name="Diesel" type="Sprite2D" parent="."]
 position = Vector2(226, 487)
 texture = ExtResource("3_k5swe")
 
-[node name="93Super" type="Sprite2D" parent="."]
-position = Vector2(482, 498)
+[node name="Gassneeded" type="Node2D" parent="."]
+position = Vector2(995, 82)
+scale = Vector2(0.4, 0.4)
+
+[node name="o3" type="Sprite2D" parent="Gassneeded"]
+visible = false
 texture = ExtResource("4_0apkd")
 
-[node name="89Plus" type="Sprite2D" parent="."]
-position = Vector2(634, 498)
+[node name="o2" type="Sprite2D" parent="Gassneeded"]
+visible = false
 texture = ExtResource("5_0y6rm")
 
-[node name="87Normal" type="Sprite2D" parent="."]
-position = Vector2(798, 496)
+[node name="o1" type="Sprite2D" parent="Gassneeded"]
+visible = false
 texture = ExtResource("6_ncc4u")
+
+[node name="TimeoutTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="pressed" from="OptionOne" to="." method="_on_option_one_pressed"]
+[connection signal="pressed" from="OptionTwo" to="." method="_on_option_two_pressed"]
+[connection signal="pressed" from="OptionThree" to="." method="_on_option_three_pressed"]
+[connection signal="timeout" from="TimeoutTimer" to="." method="_on_timeout_timer_timeout"]

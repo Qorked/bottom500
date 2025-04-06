@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://xjqq0luv2wtd"]
+[gd_scene load_steps=6 format=3 uid="uid://xjqq0luv2wtd"]
 
 [ext_resource type="Script" uid="uid://dxovv45ubvrpu" path="res://ui/mainmenu.gd" id="1_016uc"]
 [ext_resource type="Texture2D" uid="uid://b04xqqqvf4egj" path="res://art/backgrounds/Main Menu.png" id="2_187hc"]
 [ext_resource type="Texture2D" uid="uid://7lbp6ftigoux" path="res://art/ui/Main Game.png" id="3_4amms"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_uvrly"]
 [ext_resource type="Texture2D" uid="uid://o15j50i66q7x" path="res://art/ui/Endless.png" id="4_uvrly"]
 
 [node name="Main" type="Control"]
@@ -17,6 +18,16 @@ script = ExtResource("1_016uc")
 [node name="MainMenu" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("2_187hc")
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(669, 461)
+scale = Vector2(0.611014, 1.16702)
+texture = ExtResource("3_uvrly")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(858, 469)
+scale = Vector2(0.611014, 1.16702)
+texture = ExtResource("3_uvrly")
 
 [node name="Button" type="TextureButton" parent="."]
 layout_mode = 0

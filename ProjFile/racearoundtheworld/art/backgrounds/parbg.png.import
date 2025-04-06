@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uq68hbpbsbkg"
-path="res://.godot/imported/parbg.png-068333bd0463f6e2213d69d8ea10dd1c.ctex"
+path="res://.godot/imported/parbg.png-c5360ea33f93ff384673e402735941fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/objects/parbg.png"
-dest_files=["res://.godot/imported/parbg.png-068333bd0463f6e2213d69d8ea10dd1c.ctex"]
+source_file="res://art/backgrounds/parbg.png"
+dest_files=["res://.godot/imported/parbg.png-c5360ea33f93ff384673e402735941fb.ctex"]
 
 [params]
 

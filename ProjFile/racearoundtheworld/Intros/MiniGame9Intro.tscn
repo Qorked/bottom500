@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c327uobpcpkyi"]
 
-[ext_resource type="Texture2D" uid="uid://j2fl0lr546h8" path="res://art/backgrounds/Pyramid.png" id="1_gcjwu"]
+[ext_resource type="Texture2D" uid="uid://bi783a36rwd1n" path="res://Intros/Pyramid exterior.png" id="1_gcjwu"]
 
 [node name="MiniGameIntro" type="Node2D"]
 

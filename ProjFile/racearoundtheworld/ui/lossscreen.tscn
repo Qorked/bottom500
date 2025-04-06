@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://6usnau6klcrx"]
+[gd_scene load_steps=9 format=3 uid="uid://6usnau6klcrx"]
 
 [ext_resource type="Script" uid="uid://c4t0nvt3jda0b" path="res://ui/lossscreen.gd" id="1_csx1s"]
 [ext_resource type="Texture2D" uid="uid://dl3gxvcj7o2jl" path="res://art/backgrounds/Crash Zone.png" id="2_b3sha"]
-[ext_resource type="Script" uid="uid://dedbhw35dife" path="res://ui/exploadingplayer.gd" id="3_b3sha"]
-[ext_resource type="Texture2D" uid="uid://x622gwf1fh8n" path="res://art/objects/All Car Sprites.png" id="4_x1b6f"]
+[ext_resource type="Texture2D" uid="uid://blgvq4hnsfrhv" path="res://art/ui/Pole.png" id="3_74om8"]
+[ext_resource type="PackedScene" uid="uid://bpswndvp7rnal" path="res://objects/general/player_2d_back_forth.tscn" id="3_x1b6f"]
+[ext_resource type="Texture2D" uid="uid://40cykbbmaee2" path="res://art/ui/Retry.png" id="4_rl15r"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74om8"]
 a = Vector2(1064, 517)
@@ -16,54 +17,6 @@ b = Vector2(1063, 517)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1b6f"]
 size = Vector2(12.5, 214)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_74om8"]
-size = Vector2(58.3333, 20)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_rl15r"]
-
-[sub_resource type="CurveTexture" id="CurveTexture_x1b6f"]
-
-[sub_resource type="Gradient" id="Gradient_74om8"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_rl15r"]
-gradient = SubResource("Gradient_74om8")
-
-[sub_resource type="Curve" id="Curve_8h6tk"]
-_limits = [-1.0, 1.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_vpgph"]
-texture_mode = 1
-curve = SubResource("Curve_8h6tk")
-
-[sub_resource type="Curve" id="Curve_83y0n"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_1ore7"]
-curve = SubResource("Curve_83y0n")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fh7vf"]
-gravity = Vector3(0, 98, 0)
-scale_max = 16.38
-scale_curve = SubResource("CurveTexture_1ore7")
-color = Color(0.912271, 4.71681e-06, 6.73831e-07, 1)
-color_ramp = SubResource("GradientTexture1D_rl15r")
-alpha_curve = SubResource("CurveTexture_x1b6f")
-hue_variation_min = -2.23517e-08
-hue_variation_max = -2.23517e-08
-hue_variation_curve = SubResource("CurveTexture_vpgph")
-
-[sub_resource type="Animation" id="Animation_n2mq0"]
-resource_name = "breakdown"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0h8tf"]
-_data = {
-&"breakdown": SubResource("Animation_n2mq0")
-}
-
 [node name="Lossscreen" type="Node2D"]
 script = ExtResource("1_csx1s")
 
@@ -71,13 +24,22 @@ script = ExtResource("1_csx1s")
 position = Vector2(576, 324)
 texture = ExtResource("2_b3sha")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 429.0
-offset_top = 304.0
-offset_right = 605.0
-offset_bottom = 338.0
-text = "RESTART
-"
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(444, 367)
+scale = Vector2(0.420229, 0.95941)
+texture = ExtResource("3_74om8")
+
+[node name="Pole2" type="Sprite2D" parent="."]
+position = Vector2(642, 370)
+scale = Vector2(0.420229, 0.95941)
+texture = ExtResource("3_74om8")
+
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 399.0
+offset_top = 249.0
+offset_right = 699.0
+offset_bottom = 349.0
+texture_normal = ExtResource("4_rl15r")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -95,40 +57,9 @@ shape = SubResource("SegmentShape2D_rl15r")
 position = Vector2(1060.75, 412)
 shape = SubResource("RectangleShape2D_x1b6f")
 
-[node name="exploadingplayer" type="CharacterBody2D" parent="."]
-position = Vector2(-133, 397)
-scale = Vector2(3, 3)
-script = ExtResource("3_b3sha")
-
-[node name="Sprite2D" type="Sprite2D" parent="exploadingplayer"]
-texture = ExtResource("4_x1b6f")
-hframes = 12
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="exploadingplayer"]
-position = Vector2(0.666667, 12)
-shape = SubResource("RectangleShape2D_74om8")
-
-[node name="Area2D" type="Area2D" parent="exploadingplayer"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="exploadingplayer/Area2D"]
-position = Vector2(22.6667, 12)
-shape = SubResource("CircleShape2D_rl15r")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="exploadingplayer"]
-emitting = false
-amount = 60
-lifetime = 1.5
-one_shot = true
-speed_scale = 1.5
-explosiveness = 1.0
-randomness = 1.0
-process_material = SubResource("ParticleProcessMaterial_fh7vf")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="exploadingplayer"]
-root_node = NodePath("../Sprite2D")
-libraries = {
-&"": SubResource("AnimationLibrary_0h8tf")
-}
+[node name="Player2dBackForth" parent="." instance=ExtResource("3_x1b6f")]
+position = Vector2(-152, 398)
+player_scale = Vector2(3, 3)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="exploading" to="." method="_on_exploading_area_entered"]

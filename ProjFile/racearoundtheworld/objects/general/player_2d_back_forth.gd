@@ -83,3 +83,17 @@ func _physics_process(delta: float) -> void:
 func _play_animation(anim: String):
 	if animator and animator.has_animation(anim):
 		animator.play(anim)
+
+func crash_and_explode():
+	velocity = Vector2.ZERO  # ⛔ Stop movement
+	set_physics_process(false)
+
+	# 👇 Play breakdown animation
+	if animator and animator.has_animation("breakdown"):
+		animator.play("breakdown")
+
+	# Optional: hide after delay or trigger explosion particles
+	# await get_tree().create_timer(1.0).timeout
+	# $ExplosionParticles.visible = true
+	# $ExplosionParticles.emitting = true
+	
