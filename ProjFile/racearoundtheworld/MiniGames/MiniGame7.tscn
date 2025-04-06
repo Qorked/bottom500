@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d05p16f0h0e6n"]
+[gd_scene load_steps=8 format=3 uid="uid://d05p16f0h0e6n"]
 
 [ext_resource type="Script" uid="uid://c7hpdsiu5fhbm" path="res://MiniGames/MiniGame7.gd" id="1_6nom3"]
 [ext_resource type="Texture2D" uid="uid://g0ukl303tfrw" path="res://art/backgrounds/Gas Station.png" id="2_jnhmw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d0x2tl5c0rccp" path="res://art/objects/93 Super.png" id="4_0apkd"]
 [ext_resource type="Texture2D" uid="uid://cpc5xesq7u0w7" path="res://art/objects/89 Plus.png" id="5_0y6rm"]
 [ext_resource type="Texture2D" uid="uid://bcbsux38rwv5q" path="res://art/objects/87 Normal.png" id="6_ncc4u"]
+[ext_resource type="AudioStream" uid="uid://bulmp40x6c7uj" path="res://cutsceens/Transition.wav" id="7_0apkd"]
 
 [node name="MiniGame7" type="Node2D"]
 script = ExtResource("1_6nom3")
@@ -59,6 +60,7 @@ texture = ExtResource("6_ncc4u")
 wait_time = 4.0
 
 [node name="MFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0apkd")
 autoplay = true
 
 [connection signal="pressed" from="OptionOne" to="." method="_on_option_one_pressed"]
