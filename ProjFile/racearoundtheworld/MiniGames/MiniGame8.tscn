@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkfbgy655cmp1"]
+[gd_scene load_steps=6 format=3 uid="uid://bkfbgy655cmp1"]
 
 [ext_resource type="Script" uid="uid://d1pid2ui2ecsc" path="res://MiniGames/MiniGame8.gd" id="1_lh4dy"]
 [ext_resource type="Texture2D" uid="uid://c6pe1uey5vnn0" path="res://art/backgrounds/Grand Canyon.png" id="2_2tggo"]
 [ext_resource type="Texture2D" uid="uid://b6aw7eyb2xqxq" path="res://art/objects/Pointy Rock.png" id="3_4xfh1"]
 [ext_resource type="Script" uid="uid://csl3f462colw4" path="res://objects/rotationpoint.gd" id="4_syq0s"]
 [ext_resource type="Texture2D" uid="uid://qxvagihxoils" path="res://art/objects/Car Driving.png" id="5_lb54u"]
-[ext_resource type="AudioStream" path="res://audio/RaceTrack.wav" id="6_lb54u"]
 
 [node name="MiniGame8" type="Node2D"]
 script = ExtResource("1_lh4dy")
@@ -34,5 +33,4 @@ texture = ExtResource("5_lb54u")
 hframes = 3
 
 [node name="MFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_lb54u")
 autoplay = true
